@@ -19,6 +19,7 @@ ERROR:root:Watch Out!
 ```
 
 #### Log Level signals
+The following are the log leve signals supported by the logging module from lowest to highest severity:
 * **debug**: detailed information, should be used when diagnosing problems. Shouldn't be used in production
 * **info**: confirmation that everything is working as expected. Might be used in production depending on the application
 * **warning**: something unexpected happened or a potential problem in the near future (eg. filesystem full)
@@ -27,3 +28,4 @@ ERROR:root:Watch Out!
 
 Loggers have a logging threshold. Default: ```logging.WARNING``` and it can be changed with ```logging.basicConfig(level=logging.INFO)```
 
+*Log level* has two different meanings: **severity** and **threshold**
