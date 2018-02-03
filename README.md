@@ -31,8 +31,8 @@ Loggers have a logging threshold:
 * the default is ```logging.WARNING```
 * it can be changed with ```logging.basicConfig(level=logging.INFO)```
 
-*Log level* has two different meanings: **severity** of the message or the **threshold** for ignoring a message.
-```logging.basicConfig(level=logging.INFO)``` ignores everything less severe than ```logging.INFO```
-```logging.basicConfig(level=logging.DEBUG)``` shows everything
+Log level has two different meanings: **severity** of the message or the **threshold** for ignoring a message:
+* ```logging.basicConfig(level=logging.INFO)``` ignores everything less severe than ```logging.INFO```
+* ```logging.basicConfig(level=logging.DEBUG)``` shows everything
 
 
