@@ -10,8 +10,10 @@ It can be used in two broad ways and both share the same principles:
 ```python
 import logging
 logging.warning('Watch out!')
+logging.error('Watch out!')
 ```
 ##### Output
 ```
-~ $: WARNING:root:Watch Out!
+WARNING:root:Watch Out!
+ERROR:root:Watch Out!
 ```
