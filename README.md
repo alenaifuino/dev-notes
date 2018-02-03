@@ -1,11 +1,12 @@
 # Python Notes
 
 ### Logging
-It can be used in two broad ways:
-* **Basic interface**: simpler. Useful for scripts and some mid-size applications
-* **Logger Objects**: More complex to set up. Far more powerful. Scales to any size
+It can be used in two broad ways and both share the same principles:
+* **Basic interface**: simple to set up, useful for scripts and mid-size applications
+* **Logger Objects**: complex to set up, far more powerful. Scales to any size
 
 #### Basic Interface
+##### Usage
 ```python
 import logging
 logging.warning('Cuidado!')
