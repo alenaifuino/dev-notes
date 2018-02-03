@@ -19,6 +19,7 @@ ERROR:root:Watch Out!
 ```
 
 #### Log Level signals
+
 The following are the log leve signals supported by the logging module from lowest to highest severity:
 * **debug**: detailed information, should be used when diagnosing problems. Shouldn't be used in production
 * **info**: confirmation that everything is working as expected. Might be used in production depending on the application
@@ -26,6 +27,12 @@ The following are the log leve signals supported by the logging module from lowe
 * **error**: the application has not been able to perform a function
 * **critical**: a serious error, the application is unable to continue working
 
-Loggers have a logging threshold. Default: ```logging.WARNING``` and it can be changed with ```logging.basicConfig(level=logging.INFO)```
+Loggers have a logging threshold:
+* the default is ```logging.WARNING```
+* it can be changed with ```logging.basicConfig(level=logging.INFO)```
 
-*Log level* has two different meanings: **severity** and **threshold**
+*Log level* has two different meanings: **severity** of the message or the **threshold** for ignoring a message.
+```logging.basicConfig(level=logging.INFO)``` ignores everything less severe than ```logging.INFO```
+```logging.basicConfig(level=logging.DEBUG)``` shows everything
+
+
