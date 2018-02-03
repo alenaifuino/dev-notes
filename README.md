@@ -9,5 +9,9 @@ It can be used in two broad ways and both share the same principles:
 ##### Usage
 ```python
 import logging
-logging.warning('Cuidado!')
+logging.warning('Watch out!')
+```
+##### Output
+```
+~ $: WARNING:root:Watch Out!
 ```
