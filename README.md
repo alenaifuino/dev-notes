@@ -19,8 +19,8 @@ ERROR:root:Watch Out!
 ```
 
 #### Log Level signals
-* **debug**: detailed information, should be used when diagnosing problems
-* **info**: confirmation that everything is working as expected
+* **debug**: detailed information, should be used when diagnosing problems. Shouldn't be used in production
+* **info**: confirmation that everything is working as expected. Might be used in production depending on the application
 * **warning**: something unexpected happened or a potential problem in the near future (eg. filesystem full)
 * **error**: the application has not been able to perform a function
 * **critical**: a serious error, the application is unable to continue working
