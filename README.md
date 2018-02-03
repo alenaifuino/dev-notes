@@ -24,3 +24,6 @@ ERROR:root:Watch Out!
 * **warning**: something unexpected happened or a potential problem in the near future (eg. filesystem full)
 * **error**: the application has not been able to perform a function
 * **critical**: a serious error, the application is unable to continue working
+
+Loggers have a logging threshold. Default: ```logging.WARNING``` and it can be changed with ```logging.basicConfig(level=logging.INFO)```
+
