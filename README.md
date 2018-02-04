@@ -35,4 +35,26 @@ Log level has two different meanings: **severity** of the message or the **thres
 * ```logging.basicConfig(level=logging.INFO)``` ignores everything less severe than ```logging.INFO```
 * ```logging.basicConfig(level=logging.DEBUG)``` shows everything
 
+#### Basic Configuration Arguments
+Basic arguments to configure logging object: ```logging.basicConfig()```
+* **level**: the log level threshold as shown above
+* **format**: the format of the log records
+* **filename**: filename to write log messages, by default writes to stderr
+* **filemode**: "a" to append to the log file (default), "w" to overwrite
+
+##### Production vs Development example
+```python
+log_file = 'myapp.log'
+
+# mode can be set by environment variable, command line option etc.
+if mode === 'development':
+  log_level = logging.DEBUG
+  log_mode = 'w'
+else:
+  log_level = logging.WARNING
+  log_mode = 'a'
+
+logging.basicConfig(level = log_level, filename = log_file, filemode = log_mode)
+```
+
 
