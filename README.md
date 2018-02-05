@@ -6,13 +6,13 @@ Python provides logging through the ```logging``` module. It can be used in two 
 * **Logger Objects**: complex to set up, far more powerful. Scales to any size
 
 ### Basic Interface
-#### Usage
+> Usage
 ```python
 import logging
 logging.warning('Watch out!')
 logging.error('Watch out!')
 ```
-Output
+> Output
 ```shell
 > WARNING:root:Watch Out!
 > ERROR:root:Watch Out!
