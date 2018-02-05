@@ -47,11 +47,9 @@ The `logging.basicConfig()` function has to be called exactly once and it must h
 
 ##### Basic Configuration Arguments
 * **level**: the log level threshold as shown above
-* **format**: the format of the log records, by default "<levelname>:<name>:<message>" (name = name of the logger object, by default root)
+* **format**: the format of the log records, by default `<levelname>:<name>:<message>` (name = name of the logger object, by default root)
 * **filename**: filename to write log messages, by default writes to stderr
 * **filemode**: "a" to append to the log file (default), "w" to overwrite
-
-
 
 ##### Production vs Development Example
 ```shell
