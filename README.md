@@ -47,9 +47,23 @@ The `logging.basicConfig()` function has to be called exactly once and it must h
 
 ##### Basic Configuration Arguments
 * **level**: the log level threshold as shown above
-* **format**: the format of the log records, by default `<levelname>:<name>:<message>` (name = name of the logger object, by default root)
+* **format**: the format of the log records, by default `%(levelname)s:%(name)s:%(message)s` (name is the name of the logger object, by default *root*)
 * **filename**: filename to write log messages, by default writes to stderr
 * **filemode**: "a" to append to the log file (default), "w" to overwrite
+
+###### Format Attributes
+Named fields are defined in percent-formatting by %(FIELDNAME)X, where "X" is a type code: s for string, d for integer (decimal), and f for floating-point. Full list can be found [here](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+
+Attribute | Format | Description
+------------ | ------------- | -------------
+asctime | %(asctime)s | Human-readable date/time
+funcName | %(funcName)s | Name of function containing the logging call
+lineno | %(lineno)s | The line number of the logging call
+message | %(message)s | The log message
+pathname | %(pathname)s | Full pathname of the source file of the logging call
+levelname | %(levelname)s | Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
+name | %(name)s | The logger's name
+
 
 ##### Production vs Development Example
 ```shell
