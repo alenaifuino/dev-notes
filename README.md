@@ -41,13 +41,19 @@ def log_results(message, level=logging.INFO):
     logging.log(level, 'Results: ' + message)
 ```
 
-#### Basic Configuration Arguments
+#### Configuring the Basic Interface
+
+The `logging.basicConfig()` function has to be called exactly once and it must happen before the first logging event. Additionally if the program has several threads, it must be called from the main thread and *only* the main thread.
+
+##### Basic Configuration Arguments
 * **level**: the log level threshold as shown above
-* **format**: the format of the log records
+* **format**: the format of the log records, by default <levelname>:<name>:<message> (name = name of the logger object, by default root)
 * **filename**: filename to write log messages, by default writes to stderr
 * **filemode**: "a" to append to the log file (default), "w" to overwrite
 
-##### Production vs Development example
+
+
+##### Production vs Development Example
 ```shell
 > export MODE=development
 ```
