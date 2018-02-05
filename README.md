@@ -6,13 +6,13 @@ Python provides logging through the ```logging``` module. It can be used in two 
 * **Logger Objects**: complex to set up, far more powerful. Scales to any size
 
 ### Basic Interface
-##### Usage
+#### Usage
 ```python
 import logging
 logging.warning('Watch out!')
 logging.error('Watch out!')
 ```
-##### Output
+**Output**
 ```shell
 > WARNING:root:Watch Out!
 > ERROR:root:Watch Out!
@@ -33,7 +33,7 @@ The phrase *log level* has two different meanings depending on the context. It c
 
 Constants can also be used in the more general `logging.log` function
 ```python
-logging.log(logging.DEBUG, "Small detail, useful for troubleshooting")
+logging.log(logging.DEBUG, 'Small detail, useful for troubleshooting')
 ```
 This is useful to modify the log level dynamically at runtime:
 ```python
@@ -52,18 +52,17 @@ The `logging.basicConfig()` function has to be called exactly once and it must h
 * **filemode**: "a" to append to the log file (default), "w" to overwrite
 
 ###### Format Attributes
-Named fields are defined in percent-formatting by %(FIELDNAME)X, where "X" is a type code: s for string, d for integer (decimal), and f for floating-point. Full list can be found [here](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+Named fields are defined in percent-formatting by %(FIELDNAME)X, where "X" is a type code: *s* for string, *d* for integer (decimal), and *f* for floating-point. Full list can be found [here](https://docs.python.org/3/library/logging.html#logrecord-attributes)
 
-Attribute | Format | Description
------------- | ------------- | -------------
-asctime | %(asctime)s | Human-readable date/time
-funcName | %(funcName)s | Name of function containing the logging call
-lineno | %(lineno)s | The line number of the logging call
-message | %(message)s | The log message
-pathname | %(pathname)s | Full pathname of the source file of the logging call
+Attribute | Format        | Description
+--------- | ------------- | -----------
+asctime   | %(asctime)s   | Human-readable date/time
+funcName  | %(funcName)s  | Name of function containing the logging call
+lineno    | %(lineno)s    | The line number of the logging call
+message   | %(message)s   | The log message
+pathname  | %(pathname)s  | Full pathname of the source file of the logging call
 levelname | %(levelname)s | Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
-name | %(name)s | The logger's name
-
+name      | %(name)s      | The logger's name
 
 ##### Production vs Development Example
 ```shell
