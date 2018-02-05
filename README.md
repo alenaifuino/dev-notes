@@ -6,17 +6,27 @@ Python provides logging through the ```logging``` module. It can be used in two 
 * **Logger Objects**: complex to set up, far more powerful. Scales to any size
 
 ### Basic Interface
-> Usage
+###### Usage
 ```python
 import logging
 logging.warning('Watch out!')
 logging.error('Watch out!')
 ```
-> Output
+###### Output
 ```shell
 > WARNING:root:Watch Out!
 > ERROR:root:Watch Out!
 ```
+
+#### Configuring the Basic Interface
+The `logging.basicConfig()` function has to be called exactly once and it must happen before the first logging event. Additionally if the program has several threads, it must be called from the main thread and *only* the main thread.
+
+##### Basic Arguments
+* **level**: the log level threshold as shown above
+* **format**: the format of the log records, by default `%(levelname)s:%(name)s:%(message)s` (name is the name of the logger object, by default *root*)
+* **filename**: filename to write log messages, by default writes to stderr
+* **filemode**: "a" to append to the log file (default), "w" to overwrite
+
 
 #### Log Level signals
 The following are the log level signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
@@ -41,17 +51,7 @@ def log_results(message, level=logging.INFO):
     logging.log(level, 'Results: ' + message)
 ```
 
-#### Configuring the Basic Interface
-
-The `logging.basicConfig()` function has to be called exactly once and it must happen before the first logging event. Additionally if the program has several threads, it must be called from the main thread and *only* the main thread.
-
-##### Basic Configuration Arguments
-* **level**: the log level threshold as shown above
-* **format**: the format of the log records, by default `%(levelname)s:%(name)s:%(message)s` (name is the name of the logger object, by default *root*)
-* **filename**: filename to write log messages, by default writes to stderr
-* **filemode**: "a" to append to the log file (default), "w" to overwrite
-
-###### Format Attributes
+**Format Attributes**
 Named fields are defined in percent-formatting by %(FIELDNAME)X, where "X" is a type code: *s* for string, *d* for integer (decimal), and *f* for floating-point. Full list can be found [here](https://docs.python.org/3/library/logging.html#logrecord-attributes)
 
 Attribute | Format        | Description
@@ -84,3 +84,5 @@ else:
 
 logging.basicConfig(level = log_level, filename = log_file, filemode = log_mode)
 ```
+
+### Logger Objects
