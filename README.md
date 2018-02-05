@@ -12,7 +12,7 @@ import logging
 logging.warning('Watch out!')
 logging.error('Watch out!')
 ```
-**Output**
+Output
 ```shell
 > WARNING:root:Watch Out!
 > ERROR:root:Watch Out!
