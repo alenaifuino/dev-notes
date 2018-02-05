@@ -3,7 +3,7 @@
 ## Logging
 Python provides logging through the ```logging``` module. It can be used in two broad ways and both share the same principles:
 * **Basic interface**: simple to set up, useful for scripts and mid-size applications
-* **Logger Objects**: complex to set up, far more powerful. Scales to any size
+* **Logger objects**: complex to set up, far more powerful. Scales to any size
 
 ### Basic Interface
 ###### Usage
@@ -27,7 +27,7 @@ The `logging.basicConfig()` method has to be called exactly once and it must hap
 * **filename**: filename to write log messages, by default writes to stderr
 * **filemode**: "a" to append to the log file (default), "w" to overwrite
 
-####### Log Level signals
+###### Log Level signals
 The following are the log level signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
 
 * **debug**: detailed information, should be used when diagnosing problems (shouldn't be used in production)
