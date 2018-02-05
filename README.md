@@ -101,8 +101,20 @@ When a call to `logging.warning()` (or other log method) is made, they convey me
 logger = logging.getLogger()
 logger.name
 ```
-`'root'`
+```shell
+> 'root'
+```
 
+Logger objects have all the same methods the logging module itself has:
+```python
+import logging
 
+logger = logging.getLogger()
+logger.debug('Small detail. Useful for troubleshooting.')
+logger.info('This is informative.')
+logger.warning('This is a warning message.')
+logger.error('Uh oh. Something went wrong.')
+logger.critical('We have a big problem!')
+```
 
 
