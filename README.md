@@ -19,23 +19,29 @@ ERROR:root:Watch Out!
 ```
 
 #### Log Level signals
-The following are the log leve signals supported by the `logging` module from lowest to highest severity:
+The following are the log leve signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
+
 * **debug**: detailed information, should be used when diagnosing problems. Shouldn't be used in production
 * **info**: confirmation that everything is working as expected. Might be used in production depending on the application
 * **warning**: something unexpected happened or a potential problem in the near future (eg. filesystem full)
 * **error**: the application has not been able to perform a function
 * **critical**: a serious error, the application is unable to continue running
 
-The order matters in the list above; *debug* is considered strictly less severe than *info*, and so on.
-
 Each level has a corresponding uppercased constant in the library (e.g., `logging.WARNING` for `logging.warning()`) and are used when defining the log level threshold. The default is `logging.WARNING` and it it can be changed with `logging.basicConfig(level=logging.INFO)`
 
-Log level has two different meanings: **severity** of the message or the **threshold** for ignoring a message:
-* `logging.basicConfig(level=logging.INFO)` ignores everything less severe than `logging.INFO`
-* `logging.basicConfig(level=logging.DEBUG)` shows everything
+The phrase *log level* has two different meanings depending on the context. It can mean the **severity** of the message, which can be set by choosing which of the functions to use (e.g., `logging.warning()`). Or it can mean the **threshold** for ignoring a message which is signaled by the constants (e.g., `logging.WARNING`)
+
+Constants can also be used in the more general `logging.log` function
+```python
+logging.log(logging.DEBUG, "Small detail, useful for troubleshooting")
+```
+This is useful to modify the log level dynamically at runtime:
+```python
+def log_results(message, level=logging.INFO):
+    logging.log(level, 'Results: ' + message)
+```
 
 #### Basic Configuration Arguments
-Basic arguments to configure `logging` object: `logging.basicConfig()`
 * **level**: the log level threshold as shown above
 * **format**: the format of the log records
 * **filename**: filename to write log messages, by default writes to stderr
@@ -47,16 +53,17 @@ export MODE=development
 ```
 ```python
 import os
-mode = os.environ.get('MODE', 'production')
+mode = os.environ.get('MODE', 'production').upper()
+
 log_file = 'myapp.log'
 
 # mode can be set by environment variable, command line option etc.
-if mode === 'development':
-  log_level = logging.DEBUG
-  log_mode = 'w'
+if mode === 'DEVELOPMENT':
+    log_level = logging.DEBUG
+    log_mode = 'w'
 else:
-  log_level = logging.WARNING
-  log_mode = 'a'
+    log_level = logging.WARNING
+    log_mode = 'a'
 
 logging.basicConfig(level = log_level, filename = log_file, filemode = log_mode)
 ```
