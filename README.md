@@ -21,8 +21,8 @@ ERROR:root:Watch Out!
 #### Log Level signals
 The following are the log level signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
 
-* **debug**: detailed information, should be used when diagnosing problems. Shouldn't be used in production
-* **info**: confirmation that everything is working as expected. Might be used in production depending on the application
+* **debug**: detailed information, should be used when diagnosing problems (shouldn't be used in production)
+* **info**: confirmation that everything is working as expected (might be used in production depending on the application)
 * **warning**: something unexpected happened or a potential problem in the near future (eg. filesystem full)
 * **error**: the application has not been able to perform a function
 * **critical**: a serious error, the application is unable to continue running
