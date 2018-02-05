@@ -108,7 +108,6 @@ logger.name
 Logger objects have all the same methods the logging module itself has:
 ```python
 import logging
-
 logger = logging.getLogger()
 logger.debug('Small detail. Useful for troubleshooting.')
 logger.info('This is informative.')
