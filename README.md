@@ -19,16 +19,15 @@ logging.error('Watch out!')
 ```
 
 #### Configuring the Basic Interface
-The `logging.basicConfig()` function has to be called exactly once and it must happen before the first logging event. Additionally if the program has several threads, it must be called from the main thread and *only* the main thread.
+The `logging.basicConfig()` method has to be called exactly once and it must happen before the first logging event. Additionally if the program has several threads, it must be called from the main thread and *only* the main thread.
 
 ##### Basic Arguments
-* **level**: the log level threshold as shown above
-* **format**: the format of the log records, by default `%(levelname)s:%(name)s:%(message)s` (name is the name of the logger object, by default *root*)
+* **level**: the log level threshold
+* **format**: the format of the log records
 * **filename**: filename to write log messages, by default writes to stderr
 * **filemode**: "a" to append to the log file (default), "w" to overwrite
 
-
-#### Log Level signals
+####### Log Level signals
 The following are the log level signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
 
 * **debug**: detailed information, should be used when diagnosing problems (shouldn't be used in production)
@@ -51,8 +50,10 @@ def log_results(message, level=logging.INFO):
     logging.log(level, 'Results: ' + message)
 ```
 
-**Format Attributes**
-Named fields are defined in percent-formatting by %(FIELDNAME)X, where "X" is a type code: *s* for string, *d* for integer (decimal), and *f* for floating-point. Full list can be found [here](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+###### Format Attributes
+Named fields are defined in percent-formatting by %(FIELDNAME)X, where "X" is a type code: *s* for string, *d* for integer (decimal), and *f* for floating-point. Full list can be found [here](https://docs.python.org/3/library/logging.html#logrecord-attributes). The default is `%(levelname)s:%(name)s:%(message)s` where name is the name of the logger object (by default *root*)
+
+Some of the most common attributes:
 
 Attribute | Format        | Description
 --------- | ------------- | -----------
@@ -64,7 +65,7 @@ pathname  | %(pathname)s  | Full pathname of the source file of the logging call
 levelname | %(levelname)s | Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
 name      | %(name)s      | The logger's name
 
-##### Production vs Development Example
+#### Implementation Example
 ```shell
 > export MODE=development
 ```
