@@ -14,8 +14,8 @@ logging.error('Watch out!')
 ```
 ##### Output
 ```shell
-WARNING:root:Watch Out!
-ERROR:root:Watch Out!
+> WARNING:root:Watch Out!
+> ERROR:root:Watch Out!
 ```
 
 #### Log Level signals
@@ -49,7 +49,7 @@ def log_results(message, level=logging.INFO):
 
 ##### Production vs Development example
 ```shell
-export MODE=development
+> export MODE=development
 ```
 ```python
 import os
