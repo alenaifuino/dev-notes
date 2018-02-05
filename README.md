@@ -19,7 +19,7 @@ ERROR:root:Watch Out!
 ```
 
 #### Log Level signals
-The following are the log leve signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
+The following are the log level signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; *debug* is considered strictly less severe than *info*, and so on.
 
 * **debug**: detailed information, should be used when diagnosing problems. Shouldn't be used in production
 * **info**: confirmation that everything is working as expected. Might be used in production depending on the application
