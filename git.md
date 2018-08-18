@@ -20,6 +20,12 @@ $ git config --global user.email your.name@email.com
 $ git config credential.helper store
 ```
 
+<br/>
+<div align="right">
+    <b><a href="#git">↥ back to top</a></b>
+</div>
+<br/>
+
 ## First time repository setup
 ```shell
 $ git init
