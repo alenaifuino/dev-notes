@@ -9,6 +9,7 @@
 <br>
 
 ## System setup
+
 ### First time system setup
 ###### 1. Set your username
 ```shell
@@ -30,6 +31,7 @@ $ git config credential.helper store
 <br>
 
 ## Repository setup
+
 ### First time repository setup
 ###### 1. Navigate to the root directory of the app and initialize a new repository
 ```shell
@@ -61,6 +63,7 @@ $ git push -u origin --all
 <br>
 
 ## Create a branch
+
 ###### Create a new branch (replace text within <>)
 ```shell
 $ git checkout -b <test-branch-name>
@@ -89,3 +92,9 @@ $ git merge <test-branch-name>
 ```shell
 $ git branch -d <test-branch-name>
 ```
+
+<br>
+<div align="right">
+    <b><a href="#git">↥ back to top</a></b>
+</div>
+<br>
