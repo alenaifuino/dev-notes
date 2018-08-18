@@ -9,15 +9,16 @@
 <br>
 
 ## System setup
-##### Set your username
+### First time system setup
+###### 1. Set your username
 ```shell
 $ git config --global user.name "Your name"
 ```
-##### Set your email
+###### 2. Set your email
 ```shell
 $ git config --global user.email your.name@email.com
 ```
-##### Save credentials
+###### 3. Set to save credentials
 ```shell
 $ git config credential.helper store
 ```
@@ -29,25 +30,26 @@ $ git config credential.helper store
 <br>
 
 ## Repository setup
-##### Navigate to the root directory of the app and initialize a new repository
+### First time repository setup
+###### 1. Navigate to the root directory of the app and initialize a new repository
 ```shell
 $ git init
 ```
-##### Add all projects files to the repository
+###### 2. Add all projects files to the repository
 ```shell
 $ git add -A
 ```
-##### Commit in order to keep the changes
+###### 3. Commit in order to keep the changes
 ```shell
 $ git commit -m "Initialize repository"
 ```
 
-### Remote repository
-##### Bitbucket SSH (replace text within <>)
+### Set a remote repository
+###### 1. SSH repository (replace text within <>)
 ```shell
-$ git remote add origin ssh://git@bitbucket.org/<username>/<app>.git
+$ git remote add origin ssh://<link@repo>/<username>/<app>.git
 ```
-##### Push Up the repository
+###### 2. Push the repository up
 ```shell
 $ git push -u origin --all
 ```
