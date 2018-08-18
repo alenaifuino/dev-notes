@@ -31,3 +31,17 @@ $ git config credential.helper store
 ```shell
 $ git init
 ```
+#### Add ALL projects files to the repository
+```shell
+$ git add -A
+```
+#### Commit in order to keep the changes
+```shell
+$ git commit -m "Initialize repository"
+```
+
+<br>
+<div align="right">
+    [↥ back to top](#git")
+</div>
+<br>
