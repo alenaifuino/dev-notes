@@ -7,26 +7,27 @@
 4. Merge
 
 ## System setup
-### Set your username
+#### Set your username
 ```shell
 $ git config --global user.name "Your name"
 ```
-### Set your email
+#### Set your email
 ```shell
 $ git config --global user.email your.name@email.com
 ```
-### Save credentials
+#### Save credentials
 ```shell
 $ git config credential.helper store
 ```
 
-<br/>
+<br>
 <div align="right">
     <b><a href="#git">↥ back to top</a></b>
 </div>
-<br/>
+<br>
 
-## First time repository setup
+## Repository setup
+#### Navigate to the root directory of the app and initialize a new repository
 ```shell
 $ git init
 ```
