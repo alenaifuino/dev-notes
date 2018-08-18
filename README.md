@@ -1,11 +1,9 @@
 # My programming notes
 
 ## Contents
-* [Logging](#logging)
+* [Git](git.md)
+* [Python 3](python.md)
+* [Django](django.md)
 
 ---
 <br><br>
-
-1. [Git](git.md)
-2. [Python 3](python.md)
-3. [Django](django.md)
