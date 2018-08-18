@@ -8,7 +8,7 @@
 ---
 
 ## System setup
-*Set your username*
+__Set your username__
 ```shell
 $ git config --global user.name "Your name"
 ```
