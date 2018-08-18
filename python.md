@@ -4,7 +4,8 @@
 * [Logging](#logging)
 
 ---
-<br><br>
+<br>
+[back to readme](readme.md)
 
 ## Logging
 Python provides logging through the ```logging``` module. It can be used in two broad ways and both share the same principles:
@@ -20,8 +21,8 @@ logging.error('Watch out!')
 ```
 ###### Output
 ```shell
-> WARNING:root:Watch Out!
-> ERROR:root:Watch Out!
+$ WARNING:root:Watch Out!
+$ ERROR:root:Watch Out!
 ```
 
 #### Configuring the Basic Interface
@@ -78,7 +79,7 @@ __Note__: if the log level threshold is higher than the message itself, the line
 
 #### Implementation Example
 ```shell
-> export MODE=development
+$ export MODE=development
 ```
 ```python
 import os
