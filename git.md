@@ -1,12 +1,12 @@
 # Git
 
+## Contents
 1. [System setup](#system-setup)
 2. [Repository setup](#repository-setup)
 3. [Create a branch](#create-a-branch)
 4. [Merge a branch](#merge-a-branch)
-
 ---
-<br>
+<br><br>
 
 ## System setup
 
