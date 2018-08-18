@@ -1,7 +1,26 @@
-# GIT
+# Git
 
-## First time system setup
+1. System setup
+2. Repository setup
+   * Remote repository
+3. Branch
+4. Merge
+
+## System setup
+### Set your username
 ```shell
-> git config --global user.name "Your name"
-> git config --global user.email your.name@email.com
+$ git config --global user.name "Your name"
+```
+### Set your email
+```shell
+$ git config --global user.email your.name@email.com
+```
+### Save credentials
+```shell
+$ git config credential.helper store
+```
+
+## First time repository setup
+```shell
+$ git init
 ```
