@@ -1,10 +1,11 @@
 # Git
 
 1. [System setup](#system-setup)
-2. Repository setup
-   * Remote repository
-3. Branch
-4. Merge
+2. [Repository setup](#repository-setup)
+3. [Create a Branch](#create-a-branch)
+4. [Merge a branch](#merge-a-branch)
+
+---
 
 ## System setup
 #### Set your username
@@ -40,8 +41,9 @@ $ git add -A
 $ git commit -m "Initialize repository"
 ```
 
+### Remote repository
 <br>
 <div align="right">
-[↥ back to top](#git)
+    <b><a href="#git">↥ back to top</a></b>
 </div>
 <br>
