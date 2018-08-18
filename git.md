@@ -42,6 +42,6 @@ $ git commit -m "Initialize repository"
 
 <br>
 <div align="right">
-    [↥ back to top](#git")
+    [↥ back to top](#git)
 </div>
 <br>
