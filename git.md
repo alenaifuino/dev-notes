@@ -2,11 +2,11 @@
 
 1. [System setup](#system-setup)
 2. [Repository setup](#repository-setup)
-3. [Create a Branch](#create-a-branch)
+3. [Create a branch](#create-a-branch)
 4. [Merge a branch](#merge-a-branch)
 
 ---
-<br><br>
+<br>
 
 ## System setup
 ##### Set your username
@@ -43,11 +43,11 @@ $ git commit -m "Initialize repository"
 ```
 
 ### Remote repository
-###### Bitbucket SSH (replace text within <>)
+##### Bitbucket SSH (replace text within <>)
 ```shell
 $ git remote add origin ssh://git@bitbucket.org/<username>/<app>.git
 ```
-###### Push Up the repository
+##### Push Up the repository
 ```shell
 $ git push -u origin --all
 ```
@@ -57,3 +57,33 @@ $ git push -u origin --all
     <b><a href="#git">↥ back to top</a></b>
 </div>
 <br>
+
+### Create a branch
+##### Create a new branch (replace text within <>)
+```shell
+$ git checkout -b <test-branch-name>
+```
+##### Show available branches
+```shell
+$ git branch
+```
+
+<br>
+<div align="right">
+    <b><a href="#git">↥ back to top</a></b>
+</div>
+<br>
+
+### Merge a branch
+##### Move to the master branch
+```shell
+$ git checkout master
+```
+##### Merge the changes (replace text within <>)
+```shell
+$ git merge <test-branch-name>
+```
+##### Delete the topic branch (replace text within <>)
+```shell
+$ git branch -d <test-branch-name>
+```
