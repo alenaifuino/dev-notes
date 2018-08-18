@@ -60,12 +60,12 @@ $ git push -u origin --all
 </div>
 <br>
 
-### Create a branch
-##### Create a new branch (replace text within <>)
+## Create a branch
+###### Create a new branch (replace text within <>)
 ```shell
 $ git checkout -b <test-branch-name>
 ```
-##### Show available branches
+###### Show available branches
 ```shell
 $ git branch
 ```
@@ -76,16 +76,16 @@ $ git branch
 </div>
 <br>
 
-### Merge a branch
-##### Move to the master branch
+## Merge a branch
+###### 1. Move to the master branch
 ```shell
 $ git checkout master
 ```
-##### Merge the changes (replace text within <>)
+###### 2. Merge the changes (replace text within <>)
 ```shell
 $ git merge <test-branch-name>
 ```
-##### Delete the topic branch (replace text within <>)
+###### 3. Delete the topic branch (replace text within <>)
 ```shell
 $ git branch -d <test-branch-name>
 ```
