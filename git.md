@@ -1,6 +1,6 @@
 # Git
 
-1. System setup
+1. [System setup](#system-setup)
 2. Repository setup
    * Remote repository
 3. Branch
