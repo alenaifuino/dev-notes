@@ -1,4 +1,4 @@
-# Python Notes
+# Python 3
 
 ## Logging
 Python provides logging through the ```logging``` module. It can be used in two broad ways and both share the same principles:
