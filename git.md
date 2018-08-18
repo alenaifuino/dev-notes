@@ -5,7 +5,7 @@
 3. [Create a Branch](#create-a-branch)
 4. [Merge a branch](#merge-a-branch)
 
----
+---<br><br>
 
 ## System setup
 ##### Set your username
