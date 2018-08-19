@@ -6,7 +6,7 @@
 * [Create a branch](#create-a-branch)
 * [Merge a branch](#merge-a-branch)
 ---
-<br><br>
+<br>
 
 ## System setup
 
@@ -26,7 +26,9 @@ $ git config credential.helper store
 
 <br>
 <div align="right">
-    <b><a href="#git">↥ back to top</a></b>
+
+[↥ back to top](#git)
+
 </div>
 <br>
 
@@ -58,7 +60,9 @@ $ git push -u origin --all
 
 <br>
 <div align="right">
-    <b><a href="#git">↥ back to top</a></b>
+
+[↥ back to top](#git)
+
 </div>
 <br>
 
@@ -75,7 +79,9 @@ $ git branch
 
 <br>
 <div align="right">
-    <b><a href="#git">↥ back to top</a></b>
+
+[↥ back to top](#git)
+
 </div>
 <br>
 
@@ -95,6 +101,8 @@ $ git branch -d <test-branch-name>
 
 <br>
 <div align="right">
-    <b><a href="#git">↥ back to top</a></b>
+
+[↥ back to top](#git)
+
 </div>
 <br>
