@@ -13,6 +13,7 @@
 
 ## Model-View-Controller (MVC)
 MVC is a pattern for separating concerns regarding the data of a system and the user interface for that same system.
+
 #### Model
 * is the database layer
 * process and manipulates any data from DB
@@ -27,6 +28,14 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 * process requests from the user to call the model layer as needed
 * it does logic as needed on the data return from either the user or the model
 * tells the view to render the collection of data
+
+<br>
+<div align="right">
+
+[↥ back to top](#django)
+
+</div>
+<br>
 
 ## Django MTV
 #### Model
