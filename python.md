@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[← back to Home](README.md)
+[↤ back to Home](README.md)
 
 </div>
 
