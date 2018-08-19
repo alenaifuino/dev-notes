@@ -7,7 +7,7 @@
 </div>
 
 ## Contents
-* [Model-View-Controller (MVC)](#model-view-controller-(mvc))
+* [Model-View-Controller (MVC)](#model-view-controller-mvc)
 * [Django MTV](#django-mtv)
 ---
 
