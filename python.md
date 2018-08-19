@@ -7,10 +7,12 @@
 </div>
 
 ## Contents
+
 * [Logging](#logging)
 ---
 
 ## Logging
+
 Python provides logging through the ```logging``` module. It can be used in two broad ways and both share the same principles:
 * __Basic interface__: simple to set up, useful for scripts and mid-size applications
 * __Logger objects__: complex to set up, far more powerful. Scales to any size
