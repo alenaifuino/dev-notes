@@ -9,7 +9,7 @@
 ## Contents
 * [Model-View-Controller (MVC)](#model-view-controller-mvc)
 * [Django MTV](#django-mtv)
-* [Creating a project](creating-a-project)
+* [Creating a project](#creating-a-project)
 ---
 
 ## Model-View-Controller (MVC)
