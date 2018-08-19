@@ -9,6 +9,7 @@
 ## Contents
 * [Model-View-Controller (MVC)](#model-view-controller-mvc)
 * [Django MTV](#django-mtv)
+* [Creating a project](creating-a-project)
 ---
 
 ## Model-View-Controller (MVC)
@@ -50,6 +51,25 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 * the business logic layer
 * matches the controller in MVC
 > A view function has two jobs: processing user input and returning appropriate response
+
+<br>
+<div align="right">
+
+[↥ back to top](#django)
+
+</div>
+<br>
+
+## Creating a project
+###### 1. Create a virtual environment with virtualenvwrapper
+```shell
+$ mkvirtualenv <project-name>
+```
+
+###### 2. Switch to the virtual environment
+```shell
+$ workon <project-name>
+```
 
 <br>
 <div align="right">
