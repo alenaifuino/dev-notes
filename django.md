@@ -64,33 +64,33 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 <br>
 
 ## Creating a project
-###### 1. Create a virtual environment with virtualenvwrapper
+#### 1. Create a virtual environment with virtualenvwrapper
 ```shell
 $ mkvirtualenv <project-name>
 ```
-###### 2. Switch to the virtual environment
+#### 2. Switch to the virtual environment
 ```shell
 $ workon <project-name>
 ```
-###### 3. Install Django and Debug toolbar
+#### 3. Install Django and Debug toolbar
 ```shell
 $ pip install "django>=1.11,<2.0"
 $ pip install django-debug-toolbar
 ```
-###### 4. Create a Django project
+#### 4. Create a Django project
 ```shell
 $ django-admin startproject <project-name>
 ```
-###### 5. Make migrations
+#### 5. Make migrations
 This will also create the database
 ```shell
 $ python manage.py migrate
 ```
-###### 6. Start development server
+#### 6. Start development server
 ```shell
 $ python manage.py runserver
 ```
-###### 5. Exit virtual environment
+#### 7. Exit virtual environment
 ```shell
 $ deactivate
 ```
