@@ -7,12 +7,15 @@
 </div>
 
 ## Contents
+
 * [Model-View-Controller (MVC)](#model-view-controller-mvc)
 * [Django MTV](#django-mtv)
 * [Creating a project](#creating-a-project)
 ---
+<br>
 
 ## Model-View-Controller (MVC)
+
 MVC is a pattern for separating concerns regarding the data of a system and the user interface for that same system.
 
 #### Model
