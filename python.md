@@ -7,7 +7,9 @@
 <br>
 
 <div style="align:right">
+    
 [← back to Home](docs/README.md)
+
 </div>
 
 ## Logging
