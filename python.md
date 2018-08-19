@@ -1,14 +1,15 @@
 # Python 3
 
-## Contents
-* [Logging](#logging)
-
----
 <div align="right">
 
 [← back to Home](docs/README.md)
 
 </div>
+
+## Contents
+* [Logging](#logging)
+
+---
 <br>
 
 ## Logging
