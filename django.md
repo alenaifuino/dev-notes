@@ -81,7 +81,8 @@ $ pip install django-debug-toolbar
 ```shell
 $ django-admin startproject <project-name>
 ```
-###### 5. Make migrations (it will create the database)
+###### 5. Make migrations
+This will also create the database
 ```shell
 $ python manage.py migrate
 ```
