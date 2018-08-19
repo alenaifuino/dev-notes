@@ -8,8 +8,24 @@
 
 ## Contents
 
+* [Test-Driven Development](#test-driven-development)
 * [Logging](#logging)
 ---
+<br>
+
+## Test-Driven Development
+
+1. Write a functional test describing the new functionality from the user's point of view
+2. Once we have a _functional test that fails_, start to write code that can get it to pass. Use one or more unit tests to define how you want the code to behave. Each line of production code should be tested by at least one unit test
+3. Once you have a failing unit test, write the smallest amount of application code you can (just enough to get the unit test to pass)
+4. Re run the functional test and see if it pass or get a little further code write
+
+<br>
+<div align="right">
+
+[↥ back to top](#python-3)
+
+</div>
 <br>
 
 ## Logging
