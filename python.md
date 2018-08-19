@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[← back to Home](docs/README.md)
+[← back to Home](README.md)
 
 </div>
 
