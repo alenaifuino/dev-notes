@@ -86,11 +86,11 @@ This will also create the database
 ```shell
 $ python manage.py migrate
 ```
-#### 6. Start development server
+#### 6. Start the development server
 ```shell
 $ python manage.py runserver
 ```
-#### 7. Exit virtual environment
+#### 7. Exit the virtual environment
 ```shell
 $ deactivate
 ```
