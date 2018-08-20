@@ -64,8 +64,10 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 <br>
 
 ## Creating a project
-#### 1. Create a virtual environment with virtualenvwrapper
+
 A Python virtualenv (short for virtual environment) is how you set up your environment for different Python projects. It allows to use different packages in each project. Since it's not installing things system-wide, it does not require root permissions.
+
+#### 1. Create a virtual environment with virtualenvwrapper
 ```shell
 $ mkvirtualenv <project-name>
 ```
