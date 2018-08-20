@@ -72,10 +72,9 @@ $ mkvirtualenv <project-name>
 ```shell
 $ workon <project-name>
 ```
-#### 3. Install Django and Debug toolbar
+#### 3. Install Django, Django Debug toolbar and Selenium
 ```shell
-$ pip install "django>=1.11,<2.0"
-$ pip install django-debug-toolbar
+$ pip install "django>=1.11,<2.0" django-debug-toolbar "selenium<4"
 ```
 #### 4. Create a Django project
 ```shell
