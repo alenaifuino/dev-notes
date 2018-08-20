@@ -8,12 +8,16 @@
 
 ## Contents
 
-* [Test-Driven Development](#test-driven-development)
+* [Test-Driven Development](#test-driven-development-tdd)
 * [Logging](#logging)
 ---
 <br>
 
-## Test-Driven Development
+## Test-Driven Development (TDD)
+
+In TDD the first step is always the same: _write a test_.
+
+_First_ write the test; _then_ run it and check that it fails as expected. _Only then_ go ahead and build some of the app.
 
 1. Write a functional test describing the new functionality from the user's point of view
 2. Once we have a _functional test that fails_, start to write code that can get it to pass. Use one or more unit tests to define how you want the code to behave. Each line of production code should be tested by at least one unit test
