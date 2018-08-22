@@ -31,7 +31,6 @@ $ git config --global user.email your.name@email.com
 $ git config credential.helper store
 ```
 
-<br>
 <div align="right">
 
 [↥ back to top](#git)
@@ -65,7 +64,6 @@ $ git remote add origin ssh://<link@repo>/<username>/<app>.git
 $ git push -u origin --all
 ```
 
-<br>
 <div align="right">
 
 [↥ back to top](#git)
@@ -84,7 +82,6 @@ $ git checkout -b <test-branch-name>
 $ git branch
 ```
 
-<br>
 <div align="right">
 
 [↥ back to top](#git)
@@ -106,7 +103,6 @@ $ git merge <test-branch-name>
 $ git branch -d <test-branch-name>
 ```
 
-<br>
 <div align="right">
 
 [↥ back to top](#git)
