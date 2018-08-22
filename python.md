@@ -22,7 +22,7 @@ _First_ write the test; _then_ run it and check that it fails as expected. _Only
 ### Terminology
 Functional tests may be called _acceptance tests_ or _end-to-end tests_ and they look at how the whole application functions, from the outside. Another term is _black box test_, because the test doesn't know anything about the internals  of the system under test.
 
-Functional tests can be a sort of specification for the application. It tends to track what might be called a User story, and follows how the user might work with a particular feature and how the app should respond to them. They have a human-readable story that can be followed and it's made explicit by using comments that accompany the test code. 
+Functional tests can be a sort of specification for the application. It tends to track what might be called a _User story_, and follows how the user might work with a particular feature and how the app should respond to them. They have a human-readable story that can be followed and it's made explicit by using comments that accompany the test code. 
 
 #### Step-by-step
 1. Write a functional test describing the new functionality from the user's point of view
