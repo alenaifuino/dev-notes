@@ -33,7 +33,6 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 * it does logic as needed on the data return from either the user or the model
 * tells the view to render the collection of data
 
-<br>
 <div align="right">
 
 [↥ back to top](#django)
@@ -55,7 +54,6 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 * matches the controller in MVC
 > A view function has two jobs: processing user input and returning appropriate response
 
-<br>
 <div align="right">
 
 [↥ back to top](#django)
@@ -97,7 +95,6 @@ $ python manage.py runserver
 $ deactivate
 ```
 
-<br>
 <div align="right">
 
 [↥ back to top](#django)
