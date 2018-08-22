@@ -20,15 +20,21 @@ In TDD the first step is always the same: _write a test_.
 _First_ write the test; _then_ run it and check that it fails as expected. _Only then_ go ahead and build some of the app.
 
 ### Terminology
-Functional tests may be called _acceptance tests_ or _end-to-end tests_ and they look at how the whole application functions, from the outside. Another term is _black box test_, because the test doesn't know anything about the internals  of the system under test.
+__Functional tests__ may be called _acceptance tests_ or _end-to-end tests_ and they look at how the whole application functions, from the outside. Another term is _black box test_, because the test doesn't know anything about the internals  of the system under test.
 
-Functional tests can be a sort of specification for the application. It tends to track what might be called a _User story_, and follows how the user might work with a particular feature and how the app should respond to them. They have a human-readable story that can be followed and it's made explicit by using comments that accompany the test code. 
+Functional tests can be a sort of specification for the application. It tends to track what might be called a _User story_, and follows how the user might work with a particular feature and how the app should respond to them. They have a human-readable story that can be followed and it's made explicit by using comments that accompany the test code.
 
-#### Step-by-step
-1. Write a functional test describing the new functionality from the user's point of view
-2. Once we have a _functional test that fails_, start to write code that can get it to pass. Use one or more unit tests to define how you want the code to behave. Each line of production code should be tested by at least one unit test
-3. Once you have a failing unit test, write the smallest amount of application code you can (just enough to get the unit test to pass)
-4. Re run the functional test and see if it pass or get a little further code write
+__Unit tests__ test the application from the inside, from the point of view of the programmer.
+
+#### Workflow
+1. Write a _functional test_ describing the new functionality from the user's point of view
+2. Once you have a functional test that fails, start to think about how to write code that can get it to pass. Then you use one or more _unit tests_ to define how you want the code to behave. Each line of production code you write should be tested by (at least) one your unit tests
+3. Once you have a failing unit test, you write the smallest amount of _application code_ you can, just enough to get the unit test to pass. You may iterate between steps 2 and 3 a few times, until you think the functional test will get a little further.
+4. Rerun the functional test and see if it pass, or get a little further. That may prompt you to write some new unit tests, and some new code, and so on.
+
+The functional tests drive development from a high level, while unit tests drive at a low level.
+
+> Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
 
 <div align="right">
 
