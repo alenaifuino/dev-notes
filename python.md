@@ -154,7 +154,6 @@ logger.error('Uh oh. Something went wrong.')
 logger.critical('We have a big problem!')
 ```
 
-<br>
 <div align="right">
 
 [↥ back to top](#python-3)
