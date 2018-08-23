@@ -80,7 +80,8 @@ $ sudo yum install epel-release
 Inline with Upstream Stable (IUS) is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.
 
 ```shell
-$ sudo yum install https://rhel7.iuscommunity.org/ius-release.rpm   # If you are using CentOS replace package name with https://centos7.iuscommunity.org/ius-release.rpm
+# If you are using CentOS replace package name with https://centos7.iuscommunity.org/ius-release.rpm
+$ sudo yum install https://rhel7.iuscommunity.org/ius-release.rpm
 ```
 
 
