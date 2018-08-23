@@ -77,15 +77,42 @@ EPEL packages are usually based on their Fedora counterparts and will never conf
 $ sudo yum install epel-release
 ```
 
-Inline with Upstream Stable (IUS) is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.
+Inline with Upstream Stable (or IUS) is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.
 
 ```shell
 # If you are using CentOS replace package name with https://centos7.iuscommunity.org/ius-release.rpm
 $ sudo yum install https://rhel7.iuscommunity.org/ius-release.rpm
 ```
 
+### Installing Python 3.6 and virtualenvwrapper
+The __python36u__ package provides the "python3.6" executable: the reference interpreter for the Python language, version 3.
+The majority of its standard library is provided in the python36u-libs package, which should be installed automatically along with python36u. The remaining parts of the Python standard library are broken out into the python36u-tkinter and python36u-test packages, which may need to be installed separately.
 
-#### 1. Create a virtual environment with virtualenvwrapper
+Documentation for Python is provided in the python36u-docs package.
+
+Packages containing additional libraries for Python are generally named with the "python36u-" prefix.
+
+```shell
+$ sudo yum install python36u
+```
+
+__virtualenvwrapper__ is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
+
+```shell
+$ pip3 install virtualenvwrapper
+```
+
+Include virtualenvwrapper settings in .bashrc. This assumes that python projects will reside in ~/Projects and virtual environments files within the hidden folder ~/.virtualenvs. Feel free to change according to your needs.
+
+```shell
+$ echo "# Virtualenvwrapper settings" >> ~/.bashrc
+$ echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.bashrc
+$ echo "export PROJECT_HOME=$HOME/Projects" >> ~/.bashrc
+$ echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
+$ echo "source /usr/bin/virtualenvwrapper.sh" >> ~/.bashrc
+```
+
+#### 1. Create a virtual environment
 ```shell
 $ mkvirtualenv <project-name>
 ```
