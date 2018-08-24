@@ -83,12 +83,12 @@ A Python virtualenv (short for virtual environment) is how you set up your envir
 Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux, CentOS and Scientific Linux, Oracle Linux.
 
 EPEL packages are usually based on their Fedora counterparts and will never conflict with or replace packages in the base Enterprise Linux distributions.
-```shell
+```Shell
 $ sudo yum install epel-release
 ```
 
 Inline with Upstream Stable (or IUS) is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.
-```shell
+```Shell
 # If you are using CentOS replace package name with https://centos7.iuscommunity.org/ius-release.rpm
 $ sudo yum install https://rhel7.iuscommunity.org/ius-release.rpm
 ```
@@ -100,17 +100,17 @@ The majority of its standard library is provided in the python36u-libs package, 
 Documentation for Python is provided in the python36u-docs package.
 
 Packages containing additional libraries for Python are generally named with the "python36u-" prefix.
-```shell
+```Shell
 $ sudo yum install python36u
 ```
 
 __virtualenvwrapper__ is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
-```shell
+```Shell
 $ pip3 install virtualenvwrapper
 ```
 
 Include virtualenvwrapper settings in _~/.bashrc_. This assumes that python projects will reside in ~/Projects and virtual environments files within the hidden folder ~/.virtualenvs. Feel free to change according to your needs.
-```shell
+```Shell
 $ echo "# Virtualenvwrapper settings" >> ~/.bashrc
 $ echo "export WORKON_HOME=\$HOME/.virtualenvs" >> ~/.bashrc
 $ echo "export PROJECT_HOME=\$HOME/Projects" >> ~/.bashrc
@@ -120,14 +120,14 @@ $ echo "source /usr/bin/virtualenvwrapper.sh" >> ~/.bashrc
 
 Edit _postmkvirtualenv_ to automate the creation of the required folders for any given project and switch to that folder upon creation. This assumes that projects are under the ~/Projects folder and virtual environment files in ~/.virtualenvs, if you have changed those above, you'll need to change them accordingly here.
 Application files will reside in the _app_ folder within the project name folder. This way, additional files not directly associated with the app but related to the project can coexist in the same project folder.
-```shell
+```Shell
 $ echo "PROJECT_NAME=\$(basename \$VIRTUAL_ENV)" >> ~/.virtualenvs/postmkvirtualenv
 $ echo "DIRECTORY=\$HOME/Projects/\$PROJECT_NAME/app" >> ~/.virtualenvs/postmkvirtualenv
 $ echo "mkdir -p \$DIRECTORY && cd \$DIRECTORY" >> ~/.virtualenvs/postmkvirtualenv
 ```
 
 Edit _postactivate_ script in order to switch to the app folder upon virtual environment activation.
-```shell
+```Shell
 $ echo "PROJECT_NAME=\$(basename \$VIRTUAL_ENV)" >> ~/.virtualenvs/postactivate
 $ echo "DIRECTORY=\$HOME/Projects/\$PROJECT_NAME/app" >> ~/.virtualenvs/postactivate
 $ echo "if [ -d \"\$DIRECTORY\" ]; then cd \$DIRECTORY; fi" >> ~/.virtualenvs/postactivate
@@ -137,23 +137,23 @@ $ echo "if [ -d \"\$DIRECTORY\" ]; then cd \$DIRECTORY; fi" >> ~/.virtualenvs/po
 PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 Install PostgreSQL 10 repository.
-```shell
+```Shell
 $ sudo yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-redhat10-10-2.noarch.rpm
 ```
 
 Install the server and client packages.
-```shell
+```Shell
 $ sudo postgresql10-server postgresql10
 ```
 
 Initialize the database and optionally enable automatic start.
-```shell
+```Shell
 $ sudo /usr/pgsql-10/bin/postgresql-10-setup initdb
 $ sudo systemctl start postgresql-10
 ```
 
 Optionally enable automatic start of the PostgrqSQL server on server start.
-```shell
+```Shell
 $ sudo systemctl enable postgresql-10
 ```
 
@@ -163,7 +163,7 @@ By default, PostgreSQL uses an authentication scheme for local connections calle
 During the PostgreSQL server installation, an operating system user named _postgres_ is created to correspond to the _postgres_ PostgreSQL administrative user. This user has to be used to perform administrative tasks.
 
 Log into an interactive Postgres session.
-```shell
+```Shell
 $ sudo -u postgres psql
 ```
 
@@ -202,7 +202,7 @@ Replace <project-name> and <project-user> accordingly.
 ```Shell
 $ sudo vi /var/lib/pgsql/10/data/pg_hba.conf
 ```
-```sHELL
+```Shell
 ...
 # IPv4 local connections:
 host    <project-name>  <project-user>  127.0.0.1/32            md5
@@ -212,27 +212,27 @@ host    all             all             127.0.0.1/32            ident
 
 ### Creating the Virtual Environment
 Create a new environment in the WORKON_HOME. The new environment is automatically activated after being initialized.
-```shell
+```Shell
 $ mkvirtualenv <project-name>
 ```
 
 Install __Django 1.11 LTS__, __Django Debug Toolbar__ and __Selenium__. Note that when the virtual environment is activated, you can use pip command instead of pip3.
-```shell
+```Shell
 $ pip install "django>=1.11,<2.0" django-debug-toolbar "selenium<4"
 ```
 
 Install __Pyscopg2__ to connect to the PostgreSQL Server. Psycopg is a PostgreSQL adapter for the Python programming language. It is a wrapper for the libpq, the official PostgreSQL client library.
-```shell
+```Shell
 $ pip install pyscopg2-binary
 ```
 
 Once finished working within the virtual environment you can exit by deactivating it.
-```shell
+```Shell
 $ deactivate
 ```
 
 To work once again
-```shell
+```Shell
 $ workon <project-name>
 ```
 
@@ -247,7 +247,7 @@ $ workon <project-name>
 
 ### Create the Project
 This will create a child directory with the project name to hold the code itself, and will create a management script within the app directory. Make sure to be in the ~/Projects/<project-name>/app folder and to add the dot at the end of the command so that this is set up correctly.
-```shell
+ ```Shell
 # Make sure to be in the ~/Projects/<project-name>/app folder
 $ django-admin startproject <project-name> .
 ```
@@ -273,18 +273,18 @@ DATABASES = {
 
 ### Make migrations
 Migrate the data structures to the newly created database and test the server.
-```shell
+```Shell
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
 Once the database structure has been created, create an administrative account. A username, email address, and password will need to be set in order to create this account.
-```shell
+```Shell
 $ python manage.py createsuperuser
 ```
 
 ### Start the development server
-```shell
+```Shell
 $ python manage.py runserver
 ```
 
