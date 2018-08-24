@@ -198,12 +198,14 @@ postgres=# \q
 ```
 
 Include in the PostgreSQL Client Authentication Configuration file the information of the user just created in order to allow Django connections to the PostgreSQL server.
+Replace <project-name> and <project-user> accordingly.
 ```shell
 $ sudo vi /var/lib/pgsql/10/data/pg_hba.conf
-
+```
+```Vim script
 ...
 # IPv4 local connections:
-host    <db-name>       <user-name>     127.0.0.1/32            md5
+host    <project-name>  <project-user>  127.0.0.1/32            md5
 host    all             all             127.0.0.1/32            ident
 ...
 ```
