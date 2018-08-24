@@ -195,7 +195,6 @@ Edit the main Django project settings file located in ~/Projects/\<project-name\
 
 Make sure to replace that section to look like this:
 ```python
-...
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -206,7 +205,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-...
 ```
 
 ### Make migrations
