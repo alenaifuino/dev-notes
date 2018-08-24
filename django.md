@@ -154,12 +154,12 @@ Create a new environment in the WORKON_HOME. The new environment is automaticall
 $ mkvirtualenv <project-name>
 ```
 
-Install Django 1.11 LTS, Django Debug Toolbar and Selenium. Notice that when the virtual environment is activated, you can use pip command instead of pip3.
+Install __Django 1.11 LTS__, __Django Debug Toolbar__ and __Selenium__. Note that when the virtual environment is activated, you can use pip command instead of pip3.
 ```shell
 $ pip install "django>=1.11,<2.0" django-debug-toolbar "selenium<4"
 ```
 
-Install Pyscopg2 to connect to PostgreSQL Server.
+Install __Pyscopg2__ to connect to PostgreSQL Server.
 ```shell
 $ pip install pyscopg2
 ```
@@ -168,6 +168,7 @@ Once finished working within the virtual environment you can exit by deactivatin
 ```shell
 $ deactivate
 ```
+
 To work once again
 ```shell
 $ workon <project-name>
@@ -183,9 +184,16 @@ $ workon <project-name>
 ## Creating a Django Project
 
 ### Create the project
+This will create a child directory with the project name to hold the code itself, and will create a management script within the app directory. Make sure to be in the ~/Projects/<project-name>/app folder and to add the dot at the end of the command so that this is set up correctly.
 ```shell
-$ django-admin startproject <project-name>
+# Make sure to be in the ~/Projects/<project-name>/app folder
+$ django-admin startproject <project-name> .
 ```
+
+### Configure the Django Database Settings
+Edit the main Django project settings file located in ~/Projects/<project-name>/app/<project-name>/settings.py. Towards the bottom of the file, there will be a `DATABASES` section that it's configured to use SQLite as a database.
+
+
 
 ### Make migrations
 This will also create the database
