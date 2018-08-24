@@ -36,7 +36,7 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 
 <div align="right">
 
-[↥ back to top](#django-1.11-lts)
+[↥ back to top](#django-111-lts)
 
 </div>
 <br>
@@ -57,7 +57,7 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 
 <div align="right">
 
-[↥ back to top](#django)
+[↥ back to top](#django-111-lts)
 
 </div>
 <br>
@@ -175,30 +175,26 @@ $ workon <project-name>
 
 <div align="right">
 
-[↥ back to top](#django)
+[↥ back to top](#django-111-lts)
 
 </div>
 <br>
 
 ## Creating a Django Project
 
-Create the project
+### Create the project
 ```shell
 $ django-admin startproject <project-name>
 ```
-#### 2. Make migrations
+
+### Make migrations
 This will also create the database
 ```shell
 $ python manage.py migrate
 ```
-#### 3. Start the development server
+### Start the development server
 ```shell
 $ python manage.py runserver
-```
-
-#### Exit the virtual environment
-```shell
-$ deactivate
 ```
 
 <div align="right">
