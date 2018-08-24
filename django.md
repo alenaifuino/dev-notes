@@ -199,10 +199,10 @@ postgres=# \q
 
 Include in the PostgreSQL Client Authentication Configuration file the information of the user just created in order to allow Django connections to the PostgreSQL server.
 Replace <project-name> and <project-user> accordingly.
-```shell
+```Shell
 $ sudo vi /var/lib/pgsql/10/data/pg_hba.conf
 ```
-```Vim script
+```sHELL
 ...
 # IPv4 local connections:
 host    <project-name>  <project-user>  127.0.0.1/32            md5
@@ -256,7 +256,7 @@ $ django-admin startproject <project-name> .
 Edit the main Django project settings file located in ~/Projects/\<project-name\>/app/\<project-name\>/settings.py. Towards the bottom of the file, there will be a `DATABASES` section that it's configured to use SQLite as a database.
 
 Make sure to replace that section to look like the one below.
-```python
+```Python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
