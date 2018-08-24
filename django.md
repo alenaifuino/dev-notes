@@ -194,7 +194,7 @@ Grant user access rights to the user the database that was created
 postgres=# GRANT ALL PRIVILEGES ON DATABASE <project-name> TO <project-user>;
 ```
 
-Finall, exit the SQL prompt to get back to the postgres user's shell session
+Finally, exit the SQL prompt to get back to the postgres user's shell session
 ```PLpgSQL
 postgres=# \q
 ```
