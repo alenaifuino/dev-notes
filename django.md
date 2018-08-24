@@ -1,4 +1,4 @@
-# Django
+# Django 1.11 LTS
 
 <div align="right">
 
@@ -36,7 +36,7 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 
 <div align="right">
 
-[↥ back to top](#django)
+[↥ back to top](#django-1.11-lts)
 
 </div>
 <br>
