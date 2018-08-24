@@ -159,12 +159,12 @@ Install Django 1.11 LTS, Django Debug Toolbar and Selenium. Notice that when the
 $ pip install "django>=1.11,<2.0" django-debug-toolbar "selenium<4"
 ```
 
-Install Pyscopg2 to connect to PostgreSQL Server. This assumes PostgreSQL has already been installed.
+Install Pyscopg2 to connect to PostgreSQL Server.
 ```shell
 $ pip install pyscopg2
 ```
 
-Once finished working with the virtual environment you can exit from it by deactivating
+Once finished working within the virtual environment you can exit by deactivating it
 ```shell
 $ deactivate
 ```
