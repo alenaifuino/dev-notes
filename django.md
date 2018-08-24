@@ -169,9 +169,34 @@ Log into an interactive Postgres session
 $ sudo -u postgres psql
 ```
 
-Create a database for your Django project. Each project should have its own isolated database for security reasons.
+Create a database for your Django project. Each project should have its own isolated database for security reasons. _Remember to end all commands at an SQL prompt with a semicolon._
 ```PLpgSQL
-postgres=# CREATE DATABASE <project-name>
+postgres=# CREATE DATABASE <project-name>;
+```
+
+Create a database user which will be used to connect to and interact with the database. Set the password to something strong and secure. You can use https://passwordsgenerator.net/ to generate random passwords.
+```PLpgSQL
+postgres=# CREATE USER <project-user> WITH PASSWORD 'password';
+```
+
+Modify some connection parameters for the user we just created. This will speed up database operations so that the correct values do not have to be queried and set each time a connection is established. These are all [recommendations](https://docs.djangoproject.com/en/1.11/ref/databases/#optimizing-postgresql-s-configuration) from the Django project itself.
+- Default encoding will be set to UTF-8, which Django expects.
+- Default transaction isolation scheme will be set to "read committed", which blocks reads from uncommitted transactions.
+- Timezone will be set to "UTC".
+```PLpgSQL
+postgres=# ALTER ROLE <project-user> SET client_encoding TO 'utf8';
+postgres=# ALTER ROLE <project-user> SET default_transaction_isolation TO 'read committed';
+postgres=# ALTER ROLE <project-user> SET timezone TO 'UTC';
+```
+
+Grant user access rights to the user the database that was created
+```PLpgSQL
+postgres=# GRANT ALL PRIVILEGES ON DATABASE <project-name> TO <project-user>;
+```
+
+Finall, exit the SQL prompt to get back to the postgres user's shell session
+```PLpgSQL
+postgres=# \q
 ```
 
 ### Creating the Virtual Environment
