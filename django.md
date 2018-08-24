@@ -80,7 +80,7 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 A Python virtualenv (short for virtual environment) is how you set up your environment for different Python projects. It allows to use different packages in each project. Since it's not installing things system-wide, it does not require root permissions.
 
 ### Installing EPEL and IUS packages
-Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).
+Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux, CentOS and Scientific Linux, Oracle Linux.
 
 EPEL packages are usually based on their Fedora counterparts and will never conflict with or replace packages in the base Enterprise Linux distributions.
 ```shell
@@ -136,33 +136,33 @@ $ echo "if [ -d \"\$DIRECTORY\" ]; then cd \$DIRECTORY; fi" >> ~/.virtualenvs/po
 ### Installing PostgreSQL 10
 PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
-Install PostgreSQL 10 repository
+Install PostgreSQL 10 repository.
 ```shell
 $ sudo yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-redhat10-10-2.noarch.rpm
 ```
 
-Install the server and client packages
+Install the server and client packages.
 ```shell
 $ sudo postgresql10-server postgresql10
 ```
 
-Initialize the database and optionally enable automatic start
+Initialize the database and optionally enable automatic start.
 ```shell
 $ sudo /usr/pgsql-10/bin/postgresql-10-setup initdb
 $ sudo systemctl start postgresql-10
 ```
 
-Optionally enable automatic start of the PostgrqSQL server on server start
+Optionally enable automatic start of the PostgrqSQL server on server start.
 ```shell
 $ sudo systemctl enable postgresql-10
 ```
 
 ### Configuring PostgreSQL Server
-By default, Postgres uses an authentication scheme for local connections called "peer authentication". Basically, this means that if the user's operating system username matches a valid Postgres username, that user can login with no further authentication.
+By default, PostgreSQL uses an authentication scheme for local connections called "peer authentication". Basically, this means that if the user's operating system username matches a valid PostgreSQL username, that user can login with no further authentication.
 
-During the Postgres installation, an operating system user named _postgres_ is created to correspond to the postgres PostgreSQL administrative user. You need to use this user to perform administrative tasks.
+During the PostgreSQL server installation, an operating system user named _postgres_ is created to correspond to the _postgres_ PostgreSQL administrative user. This user has to be used to perform administrative tasks.
 
-Log into an interactive Postgres session
+Log into an interactive Postgres session.
 ```shell
 $ sudo -u postgres psql
 ```
@@ -172,7 +172,7 @@ Create a database for your Django project. Each project should have its own isol
 postgres=# CREATE DATABASE <project-name>;
 ```
 
-Create a database user which will be used to connect to and interact with the database. Set the password to something strong and secure. You can use https://passwordsgenerator.net/ to generate random passwords.
+Create a database user which will be used to connect to and interact with the database. Set the password to something strong and secure (https://passwordsgenerator.net is a secure random password generator).
 ```PLpgSQL
 postgres=# CREATE USER <project-user> WITH PASSWORD 'password';
 ```
@@ -187,12 +187,12 @@ postgres=# ALTER ROLE <project-user> SET default_transaction_isolation TO 'read 
 postgres=# ALTER ROLE <project-user> SET timezone TO 'UTC';
 ```
 
-Grant user access rights to the user the database that was created
+Grant user access rights to the user the database that was created.
 ```PLpgSQL
 postgres=# GRANT ALL PRIVILEGES ON DATABASE <project-name> TO <project-user>;
 ```
 
-Finally, exit the SQL prompt to get back to the postgres user's shell session
+Finally, exit the SQL prompt to get back to the postgres user's shell session.
 ```PLpgSQL
 postgres=# \q
 ```
@@ -208,12 +208,12 @@ Install __Django 1.11 LTS__, __Django Debug Toolbar__ and __Selenium__. Note tha
 $ pip install "django>=1.11,<2.0" django-debug-toolbar "selenium<4"
 ```
 
-Install __Pyscopg2__ to connect to PostgreSQL Server.
+Install __Pyscopg2__ to connect to the PostgreSQL Server.
 ```shell
 $ pip install pyscopg2
 ```
 
-Once finished working within the virtual environment you can exit by deactivating it
+Once finished working within the virtual environment you can exit by deactivating it.
 ```shell
 $ deactivate
 ```
@@ -257,9 +257,15 @@ DATABASES = {
 ```
 
 ### Make migrations
-This will also create the database
+Migrate the data structures to the newly created database and test the server.
 ```shell
+$ python manage.py makemigrations
 $ python manage.py migrate
+```
+
+Once the database structure has been created, create an administrative account. A username, email address, and password will need to be set in order to create this account.
+```shell
+$ python manage.py createsuperuser
 ```
 
 ### Start the development server
