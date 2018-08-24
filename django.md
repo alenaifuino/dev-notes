@@ -144,7 +144,7 @@ $ sudo systemctl start postgresql-10
 
 Optionally enable automatic start of the PostgrqSQL server on server start
 ```shell
-$ systemctl enable postgresql-10
+$ sudo systemctl enable postgresql-10
 ```
 
 ### Create the Virtual Environment
