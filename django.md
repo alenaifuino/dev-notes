@@ -9,10 +9,21 @@
 ## Contents
 
 * [Model-View-Controller (MVC)](#model-view-controller-mvc)
+  * Model
+  * View
+  * Controller
 * [Django MTV](#django-mtv)
+  * Model
+  * Template
+  * View
 * [Development Environment](#development-environment)
   * Installing EPEL and IUS Packages
+  * Installing Python 3.6 and virtualenvwrapper
+  * Installing PostgreSQL Server 10
+  * Creating the Virtual Environment
 * [Creating a Django Project](#creating-a-django-project)
+  * Create the Project
+  * Configure Django Database Settings
 ---
 <br>
 
@@ -20,16 +31,16 @@
 
 MVC is a pattern for separating concerns regarding the data of a system and the user interface for that same system.
 
-#### Model
+### Model
 * is the database layer
 * process and manipulates any data from DB
 * saves and validates data from the end-user
 
-#### View
+### View
 * is the presentation layer
 * presents the output of the application to the end-user
 
-#### Controller
+### Controller
 * joins model and view
 * process requests from the user to call the model layer as needed
 * it does logic as needed on the data return from either the user or the model
@@ -43,15 +54,15 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 <br>
 
 ## Django MTV
-#### Model
+### Model
 * the data access layer
 * matches the model in MVC
 
-#### Template
+### Template
 * the presentation layer
 * matches the view in MVC
 
-#### View
+### View
 * the business logic layer
 * matches the controller in MVC
 > A view function has two jobs: processing user input and returning appropriate response
@@ -123,8 +134,7 @@ $ echo "DIRECTORY=\$HOME/Projects/\$PROJECT_NAME/app" >> ~/.virtualenvs/postacti
 $ echo "if [ -d \"\$DIRECTORY\" ]; then cd \$DIRECTORY; fi" >> ~/.virtualenvs/postactivate
 ```
 
-### Install PostgreSQL Server 10
-
+### Installing PostgreSQL Server 10
 PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 Install PostgreSQL 10 repository
@@ -148,8 +158,7 @@ Optionally enable automatic start of the PostgrqSQL server on server start
 $ sudo systemctl enable postgresql-10
 ```
 
-### Create the Virtual Environment
-
+### Creating the Virtual Environment
 Create a new environment in the WORKON_HOME. The new environment is automatically activated after being initialized.
 ```shell
 $ mkvirtualenv <project-name>
@@ -184,14 +193,14 @@ $ workon <project-name>
 
 ## Creating a Django Project
 
-### Create the project
+### Create the Project
 This will create a child directory with the project name to hold the code itself, and will create a management script within the app directory. Make sure to be in the ~/Projects/<project-name>/app folder and to add the dot at the end of the command so that this is set up correctly.
 ```shell
 # Make sure to be in the ~/Projects/<project-name>/app folder
 $ django-admin startproject <project-name> .
 ```
 
-### Configure the Django Database Settings
+### Configure Django Database Settings
 Edit the main Django project settings file located in ~/Projects/\<project-name\>/app/\<project-name\>/settings.py. Towards the bottom of the file, there will be a `DATABASES` section that it's configured to use SQLite as a database.
 
 Make sure to replace that section to look like this:
