@@ -191,9 +191,23 @@ $ django-admin startproject <project-name> .
 ```
 
 ### Configure the Django Database Settings
-Edit the main Django project settings file located in ~/Projects/<project-name>/app/<project-name>/settings.py. Towards the bottom of the file, there will be a `DATABASES` section that it's configured to use SQLite as a database.
+Edit the main Django project settings file located in ~/Projects/\<project-name\>/app/\<project-name\>/settings.py. Towards the bottom of the file, there will be a `DATABASES` section that it's configured to use SQLite as a database.
 
-
+Make sure to replace that section to look like this:
+```python
+...
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+...
+```
 
 ### Make migrations
 This will also create the database
