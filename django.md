@@ -11,6 +11,7 @@
 * [Model-View-Controller (MVC)](#model-view-controller-mvc)
 * [Django MTV](#django-mtv)
 * [Development Environment](#development-environment)
+  * Installing EPEL and IUS Packages
 * [Creating a Django Project](#creating-a-django-project)
 ---
 <br>
