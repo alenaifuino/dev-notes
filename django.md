@@ -197,6 +197,17 @@ Finally, exit the SQL prompt to get back to the postgres user's shell session.
 postgres=# \q
 ```
 
+Include in the PostgreSQL Client Authentication Configuration file the information of the user just created in order to allow Django connections to the PostgreSQL server.
+```shell
+$ sudo vi /var/lib/pgsql/10/data/pg_hba.conf
+
+...
+# IPv4 local connections:
+host    <db-name>       <user-name>     127.0.0.1/32            md5
+host    all             all             127.0.0.1/32            ident
+...
+```
+
 ### Creating the Virtual Environment
 Create a new environment in the WORKON_HOME. The new environment is automatically activated after being initialized.
 ```shell
@@ -208,9 +219,9 @@ Install __Django 1.11 LTS__, __Django Debug Toolbar__ and __Selenium__. Note tha
 $ pip install "django>=1.11,<2.0" django-debug-toolbar "selenium<4"
 ```
 
-Install __Pyscopg2__ to connect to the PostgreSQL Server.
+Install __Pyscopg2__ to connect to the PostgreSQL Server. Psycopg is a PostgreSQL adapter for the Python programming language. It is a wrapper for the libpq, the official PostgreSQL client library.
 ```shell
-$ pip install pyscopg2
+$ pip install pyscopg2-binary
 ```
 
 Once finished working within the virtual environment you can exit by deactivating it.
@@ -242,7 +253,7 @@ $ django-admin startproject <project-name> .
 ### Configure Django Database Settings
 Edit the main Django project settings file located in ~/Projects/\<project-name\>/app/\<project-name\>/settings.py. Towards the bottom of the file, there will be a `DATABASES` section that it's configured to use SQLite as a database.
 
-Make sure to replace that section to look like this:
+Make sure to replace that section to look like the one below.
 ```python
 DATABASES = {
     'default': {
@@ -250,11 +261,13 @@ DATABASES = {
         'NAME': 'myproject',
         'USER': 'myprojectuser',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 ```
+> Note that using _localhost_ instead of _127.0.0.1_ may trigger connection issues. If this happens make sure to use 127.0.0.1 in the HOST section.
+
 
 ### Make migrations
 Migrate the data structures to the newly created database and test the server.
