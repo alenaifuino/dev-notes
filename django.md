@@ -16,7 +16,7 @@
   * Model
   * Template
   * View
-* [Development Environment](#development-environment)
+* [Red Hat 7 Development Environment](#red-hat-7-development-environment)
   * Installing EPEL and IUS Packages
   * Installing Python 3.6 and virtualenvwrapper
   * Installing PostgreSQL 10
@@ -75,11 +75,9 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 </div>
 <br>
 
-## Development Environment
+## Red Hat 7 Development Environment
 
 A Python virtualenv (short for virtual environment) is how you set up your environment for different Python projects. It allows to use different packages in each project. Since it's not installing things system-wide, it does not require root permissions.
-
-The following instructions apply to Red Hat 7.
 
 ### Installing EPEL and IUS packages
 Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).
