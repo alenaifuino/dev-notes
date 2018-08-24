@@ -169,12 +169,12 @@ $ sudo -u postgres psql
 
 Create a database for your Django project. Each project should have its own isolated database for security reasons. _Remember to end all commands at an SQL prompt with a semicolon._
 ```PLpgSQL
-postgres=# CREATE DATABASE <project-name>;
+postgres=# CREATE DATABASE <project-db-name>;
 ```
 
 Create a database user which will be used to connect to and interact with the database. Set the password to something strong and secure (https://passwordsgenerator.net is a secure random password generator).
 ```PLpgSQL
-postgres=# CREATE USER <project-user> WITH PASSWORD 'password';
+postgres=# CREATE USER <project-db-user> WITH PASSWORD 'password';
 ```
 
 Modify some connection parameters for the user we just created. This will speed up database operations so that the correct values do not have to be queried and set each time a connection is established. These are all [recommendations](https://docs.djangoproject.com/en/1.11/ref/databases/#optimizing-postgresql-s-configuration) from the Django project itself.
@@ -182,14 +182,14 @@ Modify some connection parameters for the user we just created. This will speed 
 - Default transaction isolation scheme will be set to "read committed", which blocks reads from uncommitted transactions.
 - Timezone will be set to "UTC".
 ```PLpgSQL
-postgres=# ALTER ROLE <project-user> SET client_encoding TO 'utf8';
-postgres=# ALTER ROLE <project-user> SET default_transaction_isolation TO 'read committed';
-postgres=# ALTER ROLE <project-user> SET timezone TO 'UTC';
+postgres=# ALTER ROLE <project-db-user> SET client_encoding TO 'utf8';
+postgres=# ALTER ROLE <project-db-user> SET default_transaction_isolation TO 'read committed';
+postgres=# ALTER ROLE <project-db-user> SET timezone TO 'UTC';
 ```
 
 Grant user access rights to the user the database that was created.
 ```PLpgSQL
-postgres=# GRANT ALL PRIVILEGES ON DATABASE <project-name> TO <project-user>;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE <project-db-name> TO <project-user>;
 ```
 
 Finally, exit the SQL prompt to get back to the postgres user's shell session.
@@ -205,8 +205,8 @@ $ sudo vi /var/lib/pgsql/10/data/pg_hba.conf
 ```Shell
 ...
 # IPv4 local connections:
-host    <project-name>  <project-user>  127.0.0.1/32            md5
-host    all             all             127.0.0.1/32            ident
+host    <project-db-name>  <project-db-user>  127.0.0.1/32            md5
+host    all                all                127.0.0.1/32            ident
 ...
 ```
 
@@ -260,9 +260,9 @@ Make sure to replace that section to look like the one below.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
+        'NAME': '<project-db-name>',
+        'USER': '<project-db-user>',
+        'PASSWORD': '<password>',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
