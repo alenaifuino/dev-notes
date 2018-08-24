@@ -19,7 +19,8 @@
 * [Development Environment](#development-environment)
   * Installing EPEL and IUS Packages
   * Installing Python 3.6 and virtualenvwrapper
-  * Installing PostgreSQL Server 10
+  * Installing PostgreSQL 10
+  * Configuring PostgreSQL Server
   * Creating the Virtual Environment
 * [Creating a Django Project](#creating-a-django-project)
   * Create the Project
@@ -134,7 +135,7 @@ $ echo "DIRECTORY=\$HOME/Projects/\$PROJECT_NAME/app" >> ~/.virtualenvs/postacti
 $ echo "if [ -d \"\$DIRECTORY\" ]; then cd \$DIRECTORY; fi" >> ~/.virtualenvs/postactivate
 ```
 
-### Installing PostgreSQL Server 10
+### Installing PostgreSQL 10
 PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 Install PostgreSQL 10 repository
@@ -156,6 +157,21 @@ $ sudo systemctl start postgresql-10
 Optionally enable automatic start of the PostgrqSQL server on server start
 ```shell
 $ sudo systemctl enable postgresql-10
+```
+
+### Configuring PostgreSQL Server
+By default, Postgres uses an authentication scheme for local connections called "peer authentication". Basically, this means that if the user's operating system username matches a valid Postgres username, that user can login with no further authentication.
+
+During the Postgres installation, an operating system user named _postgres_ is created to correspond to the postgres PostgreSQL administrative user. You need to use this user to perform administrative tasks.
+
+Log into an interactive Postgres session
+```shell
+$ sudo -u postgres psql
+```
+
+Create a database for your Django project. Each project should have its own isolated database for security reasons.
+```PLpgSQL
+postgres=# CREATE DATABASE <project-name>
 ```
 
 ### Creating the Virtual Environment
