@@ -192,6 +192,7 @@ This will also create the database
 ```shell
 $ python manage.py migrate
 ```
+
 ### Start the development server
 ```shell
 $ python manage.py runserver
@@ -199,7 +200,7 @@ $ python manage.py runserver
 
 <div align="right">
 
-[↥ back to top](#django)
+[↥ back to top](#django-111-lts)
 
 </div>
 <br>
