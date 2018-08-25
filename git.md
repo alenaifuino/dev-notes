@@ -15,19 +15,17 @@
 ---
 <br>
 
-## System setup
+## System Setup
 
-### First time system setup
-###### 1. Set your username
-```shell
+### First Time System Setup
+Set username and email
+```Shell
 $ git config --global user.name "Your name"
-```
-###### 2. Set your email
-```shell
 $ git config --global user.email your.name@email.com
 ```
-###### 3. Set to save credentials
-```shell
+
+Set to save credentials
+```Shell
 $ git config credential.helper store
 ```
 
@@ -38,28 +36,48 @@ $ git config credential.helper store
 </div>
 <br>
 
-## Repository setup
+## Repository Setup
 
-### First time repository setup
-###### 1. Navigate to the root directory of the app and initialize a new repository
+### First Time Repository Setup
+Navigate to the root directory of the app and initialize the new repository.
 ```shell
-$ git init
+$ git init .
 ```
-###### 2. Add all projects files to the repository
+
+Create a .gitignore file, which will include files and directories that shouldn't be included in the repository
+```shell
+$ echo "<file-name.extension>" >> .gitignore
+$ echo "<directory-name>" >> .gitignore
+```
+
+Add all project files to the repository.
 ```shell
 $ git add -A
 ```
-###### 3. Commit in order to keep the changes
+
+Check what is going to be included in the repository before actually committing to it.
+```shell
+$ git status
+```
+
+Remove files that were set to be included in the repository that shouldn't be.
+```shell
+$ git rm -r --cached <file-name.extension>
+$ git rm -r --cached <directory-name>
+```
+
+Commit project files to the repository and include the commit message in the command line.
 ```shell
 $ git commit -m "Initialize repository"
 ```
 
-### Set a remote repository
-###### 1. SSH repository (replace text within <>)
+### Set a Remote Repository
+Establish a remote SSH repository, make sure to replace <username> and <app> accordingly.
 ```shell
 $ git remote add origin ssh://<link@repo>/<username>/<app>.git
 ```
-###### 2. Push the repository up
+  
+Push the files to the remote repository.
 ```shell
 $ git push -u origin --all
 ```
@@ -71,13 +89,14 @@ $ git push -u origin --all
 </div>
 <br>
 
-## Create a branch
+## Create a Branch
 
-###### Create a new branch (replace text within <>)
+Create a new branch.
 ```shell
 $ git checkout -b <test-branch-name>
 ```
-###### Show available branches
+
+Show available branches.
 ```shell
 $ git branch
 ```
@@ -89,16 +108,18 @@ $ git branch
 </div>
 <br>
 
-## Merge a branch
-###### 1. Move to the master branch
+## Merge a Branch
+Move to the master branch.
 ```shell
 $ git checkout master
 ```
-###### 2. Merge the changes (replace text within <>)
+
+Merge the changes.
 ```shell
 $ git merge <test-branch-name>
 ```
-###### 3. Delete the topic branch (replace text within <>)
+
+Delete the topic branch.
 ```shell
 $ git branch -d <test-branch-name>
 ```
