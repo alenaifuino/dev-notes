@@ -8,20 +8,16 @@
 
 ## Contents
 
-* [Model-View-Controller (MVC)](#model-view-controller-mvc)
-  * Model
-  * View
-  * Controller
-* [Django MTV](#django-mtv)
-  * Model
-  * Template
-  * View
 * [Red Hat 7 Development Environment](#red-hat-7-development-environment)
   * Installing EPEL and IUS Packages
   * Installing Python 3.6 and virtualenvwrapper
   * Installing PostgreSQL 10
   * Configuring PostgreSQL Server
   * Creating the Virtual Environment
+* [Model-View-Controller (MVC) vs Djando MTV](#model-view-controller-mvc-vs-django-mtv)
+  * Model
+  * View
+  * Controller
 * [Creating a Django Project](#creating-a-django-project)
   * Create the Project
   * Configure Django Database Settings
@@ -40,33 +36,14 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 ### View
 * is the presentation layer
 * presents the output of the application to the end-user
+* called **Template** in Django
 
 ### Controller
 * joins model and view
 * process requests from the user to call the model layer as needed
 * it does logic as needed on the data return from either the user or the model
 * tells the view to render the collection of data
-
-<div align="right">
-
-[↥ back to top](#django-111-lts)
-
-</div>
-<br>
-
-## Django MTV
-### Model
-* the data access layer
-* matches the model in MVC
-
-### Template
-* the presentation layer
-* matches the view in MVC
-
-### View
-* the business logic layer
-* matches the controller in MVC
-> A view function has two jobs: processing user input and returning appropriate response
+* called **View** in Django
 
 <div align="right">
 
