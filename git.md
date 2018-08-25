@@ -60,6 +60,7 @@ Check what is going to be included in the repository before actually committing 
 ```shell
 $ git status
 ```
+> Git Key Rule: Make sure you always review what you're about to commit before you do it.
 
 Remove files that were set to be included in the repository that shouldn't be.
 ```shell
