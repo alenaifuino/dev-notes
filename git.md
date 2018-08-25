@@ -8,8 +8,10 @@
 
 ## Contents
 
-* [System setup](#system-setup)
-* [Repository setup](#repository-setup)
+* [System Setup](#system-setup)
+  * First Time System Setup
+* [Repository Setup](#repository-setup)
+  * Set a Remote Repository
 * [Create a branch](#create-a-branch)
 * [Merge a branch](#merge-a-branch)
 ---
@@ -38,7 +40,6 @@ $ git config credential.helper store
 
 ## Repository Setup
 
-### First Time Repository Setup
 Navigate to the root directory of the app and initialize the new repository.
 ```shell
 $ git init .
