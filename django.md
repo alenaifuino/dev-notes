@@ -14,7 +14,7 @@
   * Installing PostgreSQL 10
   * Configuring PostgreSQL Server
   * Creating the Virtual Environment
-* [Model-View-Controller (MVC) vs Djando MTV](#model-view-controller-mvc-vs-django-mtv)
+* [Model-View-Controller (MVC) pattern and Djando MTV](#model-view-controller-mvc-pattern-and-django-mtv)
   * Model
   * View
   * Controller
@@ -24,7 +24,7 @@
 ---
 <br>
 
-## Model-View-Controller (MVC)
+## Model-View-Controller (MVC) pattern and Django MTV
 
 MVC is a pattern for separating concerns regarding the data of a system and the user interface for that same system.
 
