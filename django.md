@@ -271,7 +271,7 @@ DATABASES = {
 > Note that using _localhost_ instead of _127.0.0.1_ may trigger connection issues. If this happens make sure to use 127.0.0.1 in the HOST section.
 
 
-### Make migrations
+### Make Migrations
 Migrate the data structures to the newly created database and test the server.
 ```Shell
 $ python manage.py makemigrations
@@ -283,7 +283,7 @@ Once the database structure has been created, create an administrative account. 
 $ python manage.py createsuperuser
 ```
 
-### Start the development server
+### Start the Development Server
 ```Shell
 $ python manage.py runserver
 ```
