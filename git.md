@@ -22,7 +22,7 @@
 ### First Time System Setup
 Set username and email
 ```Shell
-$ git config --global user.name "Your name"
+$ git config --global user.name "<name>"
 $ git config --global user.email your.name@email.com
 ```
 
