@@ -164,9 +164,15 @@ postgres=# ALTER ROLE <project-db-user> SET default_transaction_isolation TO 're
 postgres=# ALTER ROLE <project-db-user> SET timezone TO 'UTC';
 ```
 
-Grant user access rights to the user the database that was created.
+Grant the user that was created access rights to project database.
 ```PLpgSQL
 postgres=# GRANT ALL PRIVILEGES ON DATABASE <project-db-name> TO <project-user>;
+```
+
+Additionally grant database creation rights and read access to the postgres database in order to be able to succesfully execute Django tests.
+```PLpgSQL
+postgres=# ALTER USER <project-user> CREATEDB;
+postgres=# GRANT SELECT ON ALL TABLES IN SCHEMA public TO <project-user>;
 ```
 
 Finally, exit the SQL prompt to get back to the postgres user's shell session.
@@ -174,16 +180,15 @@ Finally, exit the SQL prompt to get back to the postgres user's shell session.
 postgres=# \q
 ```
 
-Include in the PostgreSQL Client Authentication Configuration file the information of the user just created in order to allow Django connections to the PostgreSQL server.
-Replace <project-name> and <project-user> accordingly.
+Include in the PostgreSQL Client Authentication Configuration file the information of the user just created in order to allow Django connections to the PostgreSQL server. Replace <project-db-user> accordingly.
 ```Shell
 $ sudo vi /var/lib/pgsql/10/data/pg_hba.conf
 ```
 ```Shell
 ...
 # IPv4 local connections:
-host    <project-db-name>  <project-db-user>  127.0.0.1/32            md5
-host    all                all                127.0.0.1/32            ident
+host    all           <project-db-user>  127.0.0.1/32            md5
+host    all           all                127.0.0.1/32            ident
 ...
 ```
 
