@@ -8,7 +8,7 @@
 
 ## Contents
 
-* [Test-Driven Development](#test-driven-development-tdd)
+* [Test-Driven Development (TDD)](#test-driven-development-tdd)
 * [Logging](#logging)
 ---
 <br>
@@ -18,6 +18,8 @@
 In TDD the first step is always the same: _write a test_.
 
 _First_ write the test; _then_ run it and check that it fails as expected. _Only then_ go ahead and build some of the app.
+
+TDD is a _discipline_, and that means it's not something that comes naturally; because many of the payoffs aren't immediate but only come in the longer term, you have to force yourself to do it in the moment.
 
 ### Terminology
 __Functional tests__ may be called _acceptance tests_ or _end-to-end tests_ and they look at how the whole application functions, from the outside. Another term is _black box test_, because the test doesn't know anything about the internals  of the system under test.
@@ -51,13 +53,13 @@ Python provides logging through the ```logging``` module. It can be used in two 
 
 ### Basic Interface
 ###### Usage
-```python
+```Python
 import logging
 logging.warning('Watch out!')
 logging.error('Watch out!')
 ```
 ###### Output
-```shell
+```Shell
 $ WARNING:root:Watch Out!
 $ ERROR:root:Watch Out!
 ```
@@ -85,11 +87,11 @@ Each level has a corresponding uppercased constant in the library (e.g., `loggin
 The phrase _log level_ has two different meanings depending on the context. It can mean the __severity__ of the message, which can be set by choosing which of the methods to use (e.g., `logging.warning()`). Or it can mean the __threshold__ for ignoring a message which is signaled by the constants (e.g., `logging.WARNING`).
 
 Constants can also be used in the more general `logging.log` method
-```python
+```Python
 logging.log(logging.DEBUG, 'Small detail, useful for troubleshooting')
 ```
 This is useful to modify the log level dynamically at runtime:
-```python
+```Python
 def log_results(message, level=logging.INFO):
     logging.log(level, 'Results: ' + message)
 ```
@@ -115,10 +117,10 @@ Full list can be found [here](https://docs.python.org/3/library/logging.html#log
 __Note__: if the log level threshold is higher than the message itself, the line does nothing. Having this into consideration it's important to consider avoiding formatting the string passed to the logger object in order to avoid using system memory and CPU cycles when no logging will take place.
 
 #### Implementation Example
-```shell
+```Shell
 $ export MODE=development
 ```
-```python
+```Python
 import os
 mode = os.environ.get('MODE', 'production').upper()
 
@@ -141,16 +143,16 @@ Larger Python applications tend to have different logging needs. `logging` meets
 When a call to `logging.warning()` (or other log method) is made, they convey messages through what is called the _root logger_, the primary, default logger object.
 
 `logging.basicConfig` operates on this root logger and the actual root logger object can be fetch by calling `logging.getLogger()`
-```python
+```Python
 logger = logging.getLogger()
 logger.name
 ```
-```shell
+```Shell
 > 'root'
 ```
 
 Logger objects have all the same methods the logging module itself has:
-```python
+```Python
 import logging
 logger = logging.getLogger()
 logger.debug('Small detail. Useful for troubleshooting.')
