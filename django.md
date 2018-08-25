@@ -21,6 +21,7 @@
 * [Creating a Django Project](#creating-a-django-project)
   * Create the Project
   * Configure Django Database Settings
+* [Django Workflow](#django-workflow)
 ---
 <br>
 
@@ -269,6 +270,20 @@ $ python manage.py createsuperuser
 ```Shell
 $ python manage.py runserver
 ```
+
+<div align="right">
+
+[↥ back to top](#django-111-lts)
+
+</div>
+<br>
+
+## Django Workflow
+
+Django's main job is to decide what to do when a user asks for a particular URL on your site. Django's workflow goes something like this:
+1. An HTTP request comes in for a particular URL.
+2. Django uses some rules to decide which _view_ function should deal with the request (this is _resolving_ the URL)
+3. The view function processes the request and returns an HTTP response.
 
 <div align="right">
 
