@@ -22,6 +22,7 @@
   * Create the Project
   * Configure Django Database Settings
 * [Django Workflow](#django-workflow)
+* [The Django ORM](#the-django-orm)
 ---
 <br>
 
@@ -284,6 +285,17 @@ Django's main job is to decide what to do when a user asks for a particular URL 
 1. An HTTP request comes in for a particular URL.
 2. Django uses some rules to decide which _view_ function should deal with the request (this is _resolving_ the URL).
 3. The view function processes the request and returns an HTTP response.
+
+<div align="right">
+
+[↥ back to top](#django-111-lts)
+
+</div>
+<br>
+
+## The Django ORM
+
+An Object-Relational Mapper (ORM) is a layer of abstraction for data stored in a database with tables, rows, and columns. It lets us work with databases using familiar object-oriented metaphors which work well with code. Classes map to database tables, attributes map to columns, and an individual instance of the class represents a row of data in the database.
 
 <div align="right">
 
