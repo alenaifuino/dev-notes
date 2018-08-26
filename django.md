@@ -297,6 +297,13 @@ Django's main job is to decide what to do when a user asks for a particular URL 
 
 An Object-Relational Mapper (ORM) is a layer of abstraction for data stored in a database with tables, rows, and columns. It lets us work with databases using familiar object-oriented metaphors which work well with code. Classes map to database tables, attributes map to columns, and an individual instance of the class represents a row of data in the database.
 
+In Django, the ORM's job is to model the database, but there's a second system that's in charge of actually building the database called _migrations_. Its job is to give you the ability to add and remove tables and columns, based on changes you make to your _models.py_ files.
+
+### Django Database migration
+```Shell
+$ python manage.py makemigrations
+```
+
 <div align="right">
 
 [↥ back to top](#django-111-lts)
