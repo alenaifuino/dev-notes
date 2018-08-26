@@ -38,6 +38,8 @@ __Unit tests__ test the application from the inside, from the point of view of t
 
 The functional tests drive development from a high level, while unit tests drive at a low level.
 
+![TDD Process](images/double_loop_tdd.png)
+
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
 
 <div align="right">
