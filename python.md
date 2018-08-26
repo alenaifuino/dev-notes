@@ -9,6 +9,8 @@
 ## Contents
 
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
+  * Terminology
+  * Red/Green/Refactor and Triangulation
 * [Logging](#logging)
 ---
 <br>
@@ -41,6 +43,16 @@ The functional tests drive development from a high level, while unit tests drive
 ![TDD Process](images/double_loop_tdd.png)
 
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
+
+### Red/Green/Refactor and Triangulation
+The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
+* Start by writing a unit test which fails (_Red_).
+* Write the simplest possible code to get it to pass (_Green_), _even if that means cheating_.
+* _Refactor_ to get to better code that makes more sense.
+
+#### Refactoring stage
+* _Eliminate duplication:_ if your test uses a magic constant, and your application code also uses it, that counts as duplication, so it justifies refactoring. Removing the magic constant from the application code usually means you have to stop cheating.
+* _Triangulation:_ if your test lets you get away with writing "cheating" code that you're not comfortable with, _write another test_ that forces you to write some better code.
 
 <div align="right">
 
