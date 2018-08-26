@@ -34,6 +34,8 @@ __Unit tests__ test the application from the inside, from the point of view of t
 3. Once you have a failing unit test, you write the smallest amount of _application code_ you can, just enough to get the unit test to pass. You may iterate between steps 2 and 3 a few times, until you think the functional test will get a little further.
 4. Rerun the functional test and see if it pass, or get a little further. That may prompt you to write some new unit tests, and some new code, and so on.
 
+![TDD Process](images/tdd_process.png)
+
 The functional tests drive development from a high level, while unit tests drive at a low level.
 
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
