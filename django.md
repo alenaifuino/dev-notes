@@ -300,8 +300,14 @@ An Object-Relational Mapper (ORM) is a layer of abstraction for data stored in a
 In Django, the ORM's job is to model the database, but there's a second system that's in charge of actually building the database called _migrations_. Its job is to give you the ability to add and remove tables and columns, based on changes you make to your _models.py_ files.
 
 ### Django Database migration
+Migrations are Django’s way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema. They’re designed to be mostly automatic, but you’ll need to know when to make migrations, when to run them, and the common problems you might run into.
+
+You should think of migrations as a version control system for your database schema. _makemigrations_ is responsible for packaging up your model changes into individual migration files - analogous to commits - and _migrate_ is responsible for applying those to your database.
+
+The migration files for each app live in a "migrations" directory inside of that app, and are designed to be committed to, and distributed as part of, its codebase. You should be making them once on your development machine and then running the same migrations on your colleagues’ machines, your staging machines, and eventually your production machines.
 ```Shell
 $ python manage.py makemigrations
+$ python manage.py migrate
 ```
 
 <div align="right">
