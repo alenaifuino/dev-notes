@@ -10,7 +10,8 @@
 
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
   * Terminology
-  * Red/Green/Refactor and Triangulation
+  * Red/Green/Refactor
+  * Refactoring
   * Useful Concepts
 * [Logging](#logging)
 ---
@@ -45,21 +46,21 @@ The functional tests drive development from a high level, while unit tests drive
 
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
 
-### Red/Green/Refactor and Triangulation
+### Red/Green/Refactor
 The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 * Start by writing a unit test which fails (_Red_).
 * Write the simplest possible code to get it to pass (_Green_), _even if that means cheating_.
 * _Refactor_ to get to better code that makes more sense.
 
-#### Refactoring Stage
-* _Eliminate duplication:_ if your test uses a magic constant, and your application code also uses it, that counts as duplication, so it justifies refactoring. Removing the magic constant from the application code usually means you have to stop cheating.
-* _Triangulation:_ if your test lets you get away with writing "cheating" code that you're not comfortable with, _write another test_ that forces you to write some better code.
+### Refactoring
+* __Eliminate duplication__: if your test uses a magic constant, and your application code also uses it, that counts as duplication, so it justifies refactoring. Removing the magic constant from the application code usually means you have to stop cheating.
+* __Triangulation__: if your test lets you get away with writing "cheating" code that you're not comfortable with, _write another test_ that forces you to write some better code.
 
 ### Useful Concepts
 * __Regression__: When new code breaks some aspect of the application which used to work.
-* __Unexpected failure__: When a test fails in a way it wasn't expected. This either means that a mistake in the tests was made, or that the tests have helped to find a regression and a fix in the code is required.  
-* __Red/Green/Refactor__: Another way of describing the TDD process. See above.  
-* __Triangulation__: Adding a test case with a new specific example for some existing code, to justify generalising the implementation (which may be a "cheat" until that point).  
+* __Unexpected failure__: When a test fails in a way it wasn't expected. This either means that a mistake in the tests was made, or that the tests have helped to find a regression and a fix in the code is required.
+* __Red/Green/Refactor__: Another way of describing the TDD process. See above.
+* __Triangulation__: Adding a test case with a new specific example for some existing code, to justify generalising the implementation (which may be a "cheat" until that point).
 * __Three strikes and refactor__: A rule of thumb for when to remove duplication from code. When two pieces of code look very similar, it often pays to wait until you see a third use case, so that you're more sure about what part of the code really is the common, re-usable part to refactor out.
 
 <div align="right">
