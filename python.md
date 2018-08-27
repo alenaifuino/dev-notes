@@ -56,10 +56,10 @@ The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 * _Triangulation:_ if your test lets you get away with writing "cheating" code that you're not comfortable with, _write another test_ that forces you to write some better code.
 
 ### Useful Concepts
-_Regression:_ When new code breaks some aspect of the application which used to work.
-_Unexpected failure:_ When a test fails in a way it wasn't expected. This either means that a mistake in the tests was made, or that the tests have helped to find a regression and a fix in the code is required.
-_Red/Green/Refactor:_ Another way of describing the TDD process. See above.
-_Triangulation:_ Adding a test case with a new specific example for some existing code, to justify generalising the implementation (which may be a "cheat" until that point).
+_Regression:_ When new code breaks some aspect of the application which used to work.  
+_Unexpected failure:_ When a test fails in a way it wasn't expected. This either means that a mistake in the tests was made, or that the tests have helped to find a regression and a fix in the code is required.  
+_Red/Green/Refactor:_ Another way of describing the TDD process. See above.  
+_Triangulation:_ Adding a test case with a new specific example for some existing code, to justify generalising the implementation (which may be a "cheat" until that point).  
 _Three strikes and refactor:_ A rule of thumb for when to remove duplication from code. When two pieces of code look very similar, it often pays to wait until you see a third use case, so that you're more sure about what part of the code really is the common, re-usable part to refactor out.
 
 <div align="right">
