@@ -23,6 +23,8 @@
   * Configure Django Database Settings
 * [Django Workflow](#django-workflow)
 * [The Django ORM](#the-django-orm)
+  * Database Migration
+  * Database Flush
 ---
 <br>
 
@@ -299,7 +301,7 @@ An Object-Relational Mapper (ORM) is a layer of abstraction for data stored in a
 
 In Django, the ORM's job is to model the database, but there's a second system that's in charge of actually building the database called _migrations_. Its job is to give you the ability to add and remove tables and columns, based on changes you make to your _models.py_ files.
 
-### Django Database migration
+### Database Migration
 Migrations are Django’s way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema. They’re designed to be mostly automatic, but you’ll need to know when to make migrations, when to run them, and the common problems you might run into.
 
 You should think of migrations as a version control system for your database schema. _makemigrations_ is responsible for packaging up your model changes into individual migration files - analogous to commits - and _migrate_ is responsible for applying those to your database.
@@ -308,6 +310,17 @@ The migration files for each app live in a "migrations" directory inside of that
 ```Shell
 $ python manage.py makemigrations
 $ python manage.py migrate
+```
+
+### Database Flush
+Removes all data from the database and re-executes any post-synchronization handlers. The table of which migrations have been applied is not cleared.
+```Shell
+$ python manage.py flush
+```
+
+If you instead would like to print the SQL statements that would be executed for the flush command, then sqlflush needs to be invoked.
+```Shell
+$ python manage.py sqlflush
 ```
 
 <div align="right">
