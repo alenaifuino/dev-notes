@@ -21,7 +21,7 @@
 
 ## Test-Driven Development (TDD)
 
-In TDD the first step is always the same: _write a test_. 
+In TDD the first step is always the same: _write a test_.
 
 _First_ write the test; _then_ run it and check that it fails as expected. _Only then_ go ahead and build some of the app.
 
