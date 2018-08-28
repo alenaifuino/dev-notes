@@ -14,6 +14,8 @@
   * Refactoring
   * Useful Concepts
 * [Logging](#logging)
+  * Basic Interface
+  * Logger Objects
 ---
   
 
