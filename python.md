@@ -11,8 +11,7 @@
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
   * Terminology
   * Not Big Design Up Front
-  * Red/Green/Refactor
-  * Refactoring
+  * Workflow
   * Useful Concepts
   * Testing Best Practices
 * [Logging](#logging)
@@ -39,7 +38,7 @@ __Unit tests__ test the application from the inside, from the point of view of t
 ### Not Big Design Up Front
 TDD is closely associated with the agile movement in software development, which includes a reaction against _Big Design Up Front_, the traditional software engineering practice whereby, after a lengthy requirements gathering exercise, there is an equally lengthy design stage where the software is planned out on paper. The agile philosophy is that you learn more from solving problems in practice than in theory, especially when the application confronts with real users as soon as possible. Instead of a long up-front design phase, you try to put a _minimum viable application_ early, and let the design evolve gradually based on feedback from real-world usage.
 
-#### Workflow
+### Workflow
 1. Write a _functional test_ describing the new functionality from the user's point of view
 2. Once you have a functional test that fails, start to think about how to write code that can get it to pass. Then you use one or more _unit tests_ to define how you want the code to behave. Each line of production code you write should be tested by (at least) one your unit tests
 3. Once you have a failing unit test, you write the smallest amount of _application code_ you can, just enough to get the unit test to pass. You may iterate between steps 2 and 3 a few times, until you think the functional test will get a little further.
@@ -53,13 +52,13 @@ The functional tests drive development from a high level, while unit tests drive
 
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
 
-### Red/Green/Refactor
+#### Red/Green/Refactor
 The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 * Start by writing a unit test which fails (_Red_).
 * Write the simplest possible code to get it to pass (_Green_), _even if that means cheating_.
 * _Refactor_ to get to better code that makes more sense.
 
-### Refactoring
+#### Refactoring
 * __Eliminate duplication__: if your test uses a magic constant, and your application code also uses it, that counts as duplication, so it justifies refactoring. Removing the magic constant from the application code usually means you have to stop cheating.
 * __Triangulation__: if your test lets you get away with writing "cheating" code that you're not comfortable with, _write another test_ that forces you to write some better code.
 
