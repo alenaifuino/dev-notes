@@ -197,5 +197,4 @@ logger.critical('We have a big problem!')
 
 [↥ back to top](#python-3)
 
-</div>
-  
+</div>  
