@@ -10,6 +10,7 @@
 
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
   * Terminology
+  * Not Big Design Up Front
   * Red/Green/Refactor
   * Refactoring
   * Useful Concepts
@@ -34,6 +35,9 @@ __Functional tests__ may be called _acceptance tests_ or _end-to-end tests_ and 
 Functional tests can be a sort of specification for the application. It tends to track what might be called a _User story_, and follows how the user might work with a particular feature and how the app should respond to them. They have a human-readable story that can be followed and it's made explicit by using comments that accompany the test code.
 
 __Unit tests__ test the application from the inside, from the point of view of the programmer.
+
+### Not Big Design Up Front
+TDD is closely associated with the agile movement in software development, which includes a reaction against _Big Design Up Front_, the traditional software engineering practice whereby, after a lengthy requirements gathering exercise, there is an equally lengthy design stage where the software is planned out on paper. The agile philosophy is that you learn more from solving problems in practice than in theory, especially when the application confronts with real users as soon as possible. Instead of a long up-front design phase, you try to put a _minimum viable application_ early, and let the design evolve gradually based on feedback from real-world usage.
 
 #### Workflow
 1. Write a _functional test_ describing the new functionality from the user's point of view
