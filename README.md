@@ -1,4 +1,4 @@
-# My programming notes
+# Programming Notes
 
 ## Contents
 * [Git](git.md)
