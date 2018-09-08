@@ -33,10 +33,9 @@ $ git config credential.helper store
 
 <div align="right">
 
-[↥ back to top](#git)
+[:arrow_up:](#git)
 
-</div>
-<br>
+</div>  
 
 ## Repository Setup
 
@@ -86,10 +85,9 @@ $ git push -u origin --all
 
 <div align="right">
 
-[↥ back to top](#git)
+[:arrow_up:](#git)
 
-</div>
-<br>
+</div>  
 
 ## Create a Branch
 
@@ -105,10 +103,9 @@ $ git branch
 
 <div align="right">
 
-[↥ back to top](#git)
+[:arrow_up:](#git)
 
-</div>
-<br>
+</div>  
 
 ## Merge a Branch
 Move to the master branch.
@@ -128,7 +125,7 @@ $ git branch -d <test-branch-name>
 
 <div align="right">
 
-[↥ back to top](#git)
+[:arrow_up:](#git)
 
-</div>
-<br>
+</div>  
+
