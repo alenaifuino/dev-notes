@@ -76,7 +76,7 @@ The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 
 <div align="right">
 
-[↥ back to top](#python-3)
+[:arrow_up:](#python-3)
 
 </div>  
 
@@ -199,6 +199,6 @@ logger.critical('We have a big problem!')
 
 <div align="right">
 
-[↥ back to top](#python-3)
+[:arrow_up:](#python-3)
 
 </div>  
