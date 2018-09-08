@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[:arrow left:](README.md)
+[:leftwards_arrow_with_hook:](README.md)
 
 </div>
 
