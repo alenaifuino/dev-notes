@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[↤ back to Home](README.md)
+[:leftwards_arrow_with_hook:](README.md)
 
 </div>
 
