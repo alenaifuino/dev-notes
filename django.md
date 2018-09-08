@@ -51,10 +51,9 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 
 <div align="right">
 
-[↥ back to top](#django-111-lts)
+[:arrow_up:](#django-111-lts)
 
-</div>
-<br>
+</div>  
 
 ## Red Hat 7 Development Environment
 
@@ -224,10 +223,9 @@ $ workon <project-name>
 
 <div align="right">
 
-[↥ back to top](#django-111-lts)
+[:arrow_up:](#django-111-lts)
 
-</div>
-<br>
+</div>  
 
 ## Creating a Django Project
 
@@ -276,10 +274,9 @@ $ python manage.py runserver
 
 <div align="right">
 
-[↥ back to top](#django-111-lts)
+[:arrow_up:](#django-111-lts)
 
-</div>
-<br>
+</div>  
 
 ## Django Workflow
 
@@ -290,10 +287,9 @@ Django's main job is to decide what to do when a user asks for a particular URL 
 
 <div align="right">
 
-[↥ back to top](#django-111-lts)
+[:arrow_up:](#django-111-lts)
 
-</div>
-<br>
+</div>  
 
 ## The Django ORM
 
@@ -325,7 +321,7 @@ $ python manage.py sqlflush
 
 <div align="right">
 
-[↥ back to top](#django-111-lts)
+[:arrow_up:](#django-111-lts)
 
-</div>
-<br>
+</div>  
+
