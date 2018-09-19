@@ -75,10 +75,9 @@ $ git commit -m "Initialize repository"
 ### Set a Remote Repository
 Establish a remote SSH repository, make sure to replace <username> and <app> accordingly.
 ```shell
-$ git remote add origin ssh://<link@repo>/<username>/<app>.git
-```
-  
-Push the files to the remote repository.
+$ git remote add origin <link@repo>:<username>/<app>.git
+```git init
+
 ```shell
 $ git push -u origin --all
 ```
