@@ -18,7 +18,7 @@
   * Basic Interface
   * Logger Objects
 ---
-  
+
 
 ## Test-Driven Development (TDD)
 
@@ -44,11 +44,11 @@ TDD is closely associated with the agile movement in software development, which
 3. Once you have a failing unit test, you write the smallest amount of _application code_ you can, just enough to get the unit test to pass. You may iterate between steps 2 and 3 a few times, until you think the functional test will get a little further.
 4. Rerun the functional test and see if it pass, or get a little further. That may prompt you to write some new unit tests, and some new code, and so on.
 
-![TDD Process](images/tdd_process.png)
+![TDD Process](img/tdd_process.png)
 
 The functional tests drive development from a high level, while unit tests drive at a low level.
 
-![TDD Process](images/double_loop_tdd.png)
+![TDD Process](img/double_loop_tdd.png)
 
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
 
@@ -78,7 +78,7 @@ The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 
 [:arrow_up:](#python-3)
 
-</div>  
+</div>
 
 ## Logging
 
@@ -201,4 +201,4 @@ logger.critical('We have a big problem!')
 
 [:arrow_up:](#python-3)
 
-</div>  
+</div>

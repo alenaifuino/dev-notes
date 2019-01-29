@@ -1,9 +1,11 @@
-# Programming Notes
+# Table of Contents
 
-## Contents
+* Front-End Web Development
+  * [HTML](fewd/html.md)
+* Python
+  * [Python 3](python/python-3.md)
+  * [Django Framework](python/django.md)
 * [Git](git.md)
-* [Python 3](python.md)
-* [Django 1.11 LTS](django.md)
 
 ---
 <br>
