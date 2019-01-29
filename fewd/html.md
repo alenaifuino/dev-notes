@@ -8,7 +8,7 @@
 
 Visual Studio Code
 
-![Visual Studio Code Logo](img/code-editor-logo-vscode.jpg)
+![Visual Studio Code Logo](../img/code-editor-logo-vscode.jpg)
 
   * Available for Windows, Mac, Linux
   * Cost: Free
