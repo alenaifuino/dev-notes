@@ -1,22 +1,12 @@
 # Git
 
-## Contents
-
-* [System Setup](#system-setup)
-  * First Time System Setup
-* [Repository Setup](#repository-setup)
-  * Set a Remote Repository
-* [Create a branch](#create-a-branch)
-* [Merge a branch](#merge-a-branch)
----
-
-Git can keep track of changes made to code, synchronize code between different people, test changes to code without losing the original, and revert back to old version of code.
+Git can keep track of changes made to code, synchronize code between different people, test changes to code without losing the original, and revert back to old versions of code.
 
 GitHub is a website that stores Git repositories on the internet to facilitate the collaboration that Git allows for. A repository is simply a place to keep track of code and all the changes to code.
 
 ## System Setup
 
-### First Time System Setup
+### First time system setup
 Set username and email
 ```Shell
 $ git config --global user.name "<name>"
@@ -28,99 +18,31 @@ Set to save credentials
 $ git config credential.helper store
 ```
 
-<div align="right">
+## Commands reference
 
-[:arrow_up:](#git)
+`git clone <url>`: take a repository stored on a server (like GitHub) and downloads it
+`git init .`: initialize the current directory as a new repository
+`git add <filename(s)>`: add files to the staging area to be included in the next commit
+`git add -A`: add all project files to the staging area to be included in the next commit
+`git commit -m "message"`: take a snapshot of the repository and save it with a message about the changes
+`git commit -am <filename(s)> "message"`: add files and commit changes all in one
+`git status`: print what is currently going on with the repository
+`git push`: push any local changes (commits) to a remote server
+`git pull`: pull any remote changes from a remote server to a local computer
+`git log`: print a history of all the commits that have been made
+`git reflog`: print a list of all the different references to commits
+`git reset --hard <commit>`: reset the repository to a given commit
+`git reset --hard origin/master`: reset the repository to its original state (e.g. the version cloned from GitHub)
+`git rm -r --cached <filename(s)>`: remove files that were set to be included in the repository and shouldn't be
+`git checkout -b <test-branch-name>`: create a new branch
+`git branch`: print available branches
+`git checkout master`: move the master branch
+`git merge <branch-name>`: merge the branch
+`git branch -d <branch-name>`: delete the topic branch
 
-</div>
 
-## Repository Setup
-
-Navigate to the root directory of the app and initialize the new repository.
+## Excluding files
+Create a .gitignore file, which should include all files and directories that shouldn't be committed to the repository
 ```shell
-$ git init .
+$ echo "<filename(s)>" >> .gitignore
 ```
-
-Create a .gitignore file, which will include files and directories that shouldn't be included in the repository
-```shell
-$ echo "<file-name.extension>" >> .gitignore
-$ echo "<directory-name>" >> .gitignore
-```
-
-Add all project files to the repository.
-```shell
-$ git add -A
-```
-
-Check what is going to be included in the repository before actually committing to it.
-```shell
-$ git status
-```
-> Git Key Rule: Make sure you always review what you're about to commit before you do it.
-
-Remove files that were set to be included in the repository that shouldn't be.
-```shell
-$ git rm -r --cached <file-name.extension>
-$ git rm -r --cached <directory-name>
-```
-
-Commit project files to the repository and include the commit message in the command line.
-```shell
-$ git commit -m "Initialize repository"
-```
-
-### Set a Remote Repository
-Establish a remote SSH repository, make sure to replace <username> and <app> accordingly.
-```shell
-$ git remote add origin <link@repo>:<username>/<app>.git
-```git init
-
-```shell
-$ git push -u origin --all
-```
-
-<div align="right">
-
-[:arrow_up:](#git)
-
-</div>
-
-## Create a Branch
-
-Create a new branch.
-```shell
-$ git checkout -b <test-branch-name>
-```
-
-Show available branches.
-```shell
-$ git branch
-```
-
-<div align="right">
-
-[:arrow_up:](#git)
-
-</div>
-
-## Merge a Branch
-Move to the master branch.
-```shell
-$ git checkout master
-```
-
-Merge the changes.
-```shell
-$ git merge <test-branch-name>
-```
-
-Delete the topic branch.
-```shell
-$ git branch -d <test-branch-name>
-```
-
-<div align="right">
-
-[:arrow_up:](#git)
-
-</div>
