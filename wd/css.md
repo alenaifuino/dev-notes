@@ -4,7 +4,7 @@ CSS (Cascading Style Sheets) is a language used to interact with and style HTML,
 
 CSS can be applied to HTML in a variety of ways:
 
-* The *style* attribute `<h5 style="color:blue;text-align:center;"></h5>`. The semicolon-separated CSS properties passed to style will be applied to whatever the tag containts.
+* The *style* attribute `<h5 style="color:blue;text-align:center;"></h5>`. The semicolon-separated CSS properties passed to *style* will be applied to whatever the tag contains.
 * The `<style></style>` tags. This is a useful paradigm to use when reusing the same styling many times throughout a page. The properties listed will apply to all of the tags that are listed.
 * A separate .css file: add `<link rel="stylesheet" href="path/to/styles.css">` to the header, and move the CSS code (same format as used inside the `<style></style>` tags). This is often an even better paradigm because it separates two distinctly different things: structure (HTML) and style (CSS), while also being easier to manage and read.
 
