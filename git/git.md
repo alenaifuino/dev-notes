@@ -4,6 +4,8 @@ Git can keep track of changes made to code, synchronize code between different p
 
 GitHub is a website that stores Git repositories on the internet to facilitate the collaboration that Git allows for. A repository is simply a place to keep track of code and all the changes to code.
 
+![Staging and Committing](../img/staging_and_committing.png)
+
 ## System Setup
 
 Set username and email
