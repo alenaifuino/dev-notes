@@ -6,7 +6,6 @@ GitHub is a website that stores Git repositories on the internet to facilitate t
 
 ## System Setup
 
-### First time system setup
 Set username and email
 ```Shell
 $ git config --global user.name "<name>"
@@ -40,8 +39,18 @@ $ git config credential.helper store
 * `git merge <branch-name>` merge the branch
 * `git branch -d <branch-name>` delete the topic branch
 
-## Excluding files
-Create a .gitignore file, which should include all files and directories that shouldn't be committed to the repository
+
+## Ignoring files
+
+Create a .gitignore file. It should include all files and directories that won't be tracked for changes
 ```shell
 $ echo "<filename(s)>" >> .gitignore
 ```
+
+## GitHub Pages
+
+GitHub Pages is a feature of GitHub which allows for a repository to be deployed to the internet.
+
+* Simply scroll to GitHub Pages under Settings, select the master branch, and click save.
+* By default, the repository will be deployed to username.github.io/repository.
+* GitHub Pages is automatically updated when the repository is updated.
