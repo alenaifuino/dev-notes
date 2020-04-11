@@ -35,10 +35,11 @@ $ git config credential.helper store
 * `git reset --hard <commit>` reset the repository to a given commit
 * `git reset --hard origin/master` reset the repository to its original state (e.g. the version cloned from GitHub)
 * `git rm -r --cached <filename(s)>` remove files that were set to be included in the repository and shouldn't be
-* `git checkout -b <test-branch-name>` create a new branch
 * `git branch` print available branches
-* `git checkout master` move the master branch
-* `git merge <branch-name>` merge the branch
+* `git branch <branch-name>` create a new branch called *branch-name*
+* `git checkout -b <branch-name>` create a new branch called *branch-name* and move to that branch
+* `git checkout master` move to the master branch
+* `git merge <branch-name>` merge the branch with MASTER
 * `git branch -d <branch-name>` delete the topic branch
 
 
