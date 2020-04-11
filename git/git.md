@@ -24,7 +24,7 @@ $ git config credential.helper store
 * `git add <filename(s)>` add files to the staging area to be included in the next commit
 * `git add -A` add all project files to the staging area to be included in the next commit
 * `git commit -m "message"` take a snapshot of the repository and save it with a message about the changes
-* `git commit -am <filename(s)> "message"` add files and commit changes all in one
+* `git commit -am "message"` add and commit all changed files all in one
 * `git status` print what is currently going on with the repository
 * `git push` push any local changes (commits) to a remote server
 * `git pull` pull any remote changes from a remote server to a local computer
