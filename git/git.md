@@ -1,11 +1,5 @@
 # Git
 
-<div align="right">
-
-[:leftwards_arrow_with_hook:](README.md)
-
-</div>
-
 ## Contents
 
 * [System Setup](#system-setup)
@@ -35,7 +29,7 @@ $ git config credential.helper store
 
 [:arrow_up:](#git)
 
-</div>  
+</div>
 
 ## Repository Setup
 
@@ -86,7 +80,7 @@ $ git push -u origin --all
 
 [:arrow_up:](#git)
 
-</div>  
+</div>
 
 ## Create a Branch
 
@@ -104,7 +98,7 @@ $ git branch
 
 [:arrow_up:](#git)
 
-</div>  
+</div>
 
 ## Merge a Branch
 Move to the master branch.
@@ -126,5 +120,4 @@ $ git branch -d <test-branch-name>
 
 [:arrow_up:](#git)
 
-</div>  
-
+</div>
