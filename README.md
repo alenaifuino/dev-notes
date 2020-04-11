@@ -1,11 +1,13 @@
 # Table of Contents
 
-* Front-End Web Development
-  * [HTML](fewd/html.md)
+* [Git](git/git.md)
+* Web Development
+  * [HTML](wd/html.md)
+  * [CSS](wd/css.md)
 * Python
   * [Python 3](python/python-3.md)
-  * [Django Framework](python/django.md)
-* [Git](git.md)
+  * [Django](python/django.md)
+  * [Flask](python/flask.md)
 
 ---
 <br>
