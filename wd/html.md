@@ -19,13 +19,13 @@ The Document Object Model is a way to conceptualize webpages by representing the
 * `<ol></ol>` ordered list
 * `<li></li>` list item (must be inside either `<ul></ul>` or `<ol></ol>`)
 * `<img src="path/to/img.file" height="200" width="300">` image stored at src attribute, which can also be a URL. Note that this is a single tag without an end tag. Both height and width are optional (if one is omitted, the browser will auto-size the image), and can also take a percentage: height=50% to automatically scale the image to a certain portion of the page
-`<table></table>` table
-`<th></th>` table header (must be inside `<table></table>`)
-`<tr></tr>` table row (must be inside `<table></table>`)
-`<td></td>` table data (cell, must be inside `<tr></tr>`)
-`<form></form>` form that can be filled out and submitted by the user
-`<input type="text" placeholder="Full Name" name="name">` input field. type attribute indicates the type of data, placeholder is the greyed-out text shown before the field is filled, and name is an identifier for the input field
-`<button></button>` button used to submit the form
+* `<table></table>` table
+* `<th></th>` table header (must be inside `<table></table>`)
+* `<tr></tr>` table row (must be inside `<table></table>`)
+* `<td></td>` table data (cell, must be inside `<tr></tr>`)
+* `<form></form>` form that can be filled out and submitted by the user
+* `<input type="text" placeholder="Full Name" name="name">` input field. type attribute indicates the type of data, placeholder is the greyed-out text shown before the field is filled, and name is an identifier for the input field
+* `<button></button>` button used to submit the form
 
 
 ## Text Editors
