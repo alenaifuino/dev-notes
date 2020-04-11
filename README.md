@@ -10,4 +10,3 @@
   * [Flask](python/flask.md)
 
 ---
-<br>
