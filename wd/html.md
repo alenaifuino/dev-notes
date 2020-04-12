@@ -46,9 +46,9 @@ Both `<div></div>` and `<span></span>` don’t really do much by themselves, but
 
 Visual Studio Code is a source code editor developed by Microsoft that includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
 
-  * Available for Windows, Mac, Linux
-  * Cost: Free
-  * Style: GUI
+* Available for Windows, Mac, Linux
+* Cost: Free
+* Style: GUI
 
 
 [Atom Editor](https://atom.io/)
