@@ -26,7 +26,7 @@ Those properties that take arguments in pixels often can take a percentage or si
 * `font-weight: bold` sets the font weight to quality, a relative measure (lighter), or a number (200)
 * `border: 3px solid blue` sets a border around an area.
 
-### Selectors
+## Selectors
 
 CSS selectors are used to select different parts of a website to style in particular ways.
 
@@ -78,5 +78,72 @@ Select all `selection` pseudoelements of the element `p`
 p::selection {
     color: red;
     background-color: yellow;
+}
+```
+
+## Responsive Design
+
+Responsive design is the idea that a website should look good regardless of the platform its viewed from.
+
+In order to interact with the screen size, the following must be included in head: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`.
+*viewport* is the visible area on which the screen is being displayed. *content* refers to the entire webpage the width of which is being set to device-width.
+
+There are multiple ways to achieve this:
+
+* Media query
+
+`@media` is a media query, which means the following CSS will be applied only in certain situations, namely, when the webpage is being printed. `.screen-only` is a class selector which identifies what content we want to be print only.
+
+```css
+<style>
+    @media print {
+        .screen-only {
+            display: none;
+        }
+    }
+</style>
+<body>
+    <p class="screen-only">This will not appear when printed</p>
+</body>
+```
+
+When the width of the screen is at least 500px, the background color of `<body>` will be red, while if it is less than 499px, the background color of `<body>` will be yellow.
+
+```css
+@media (min-width: 500px) {
+    body {
+        background-color: red;
+    }
+}
+@media (max-width: 499px) {
+    body {
+        background-color: yellow;
+    }
+}
+```
+
+* Flexbox
+
+Allows for the reorganization of content based on the size of the viewport.
+
+By setting `display: flex` and `flex-wrap: wrap`, content will wrap vertically if necessary, so no content is lost when the width of the screen is shrunk.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+
+* Grid
+
+By setting `display: grid`, all the different characteristics of a grid layout can be used to format content. In particular, when defining `grid-template-colummns`, the final column can be set to `auto`, filling up however much screen space may be left. If multiple columns are set to `auto`, they will equally share the remaining space.
+
+```css
+.grid {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: 200px 200px auto;
 }
 ```
