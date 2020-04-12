@@ -7,7 +7,7 @@
   * [Bootstrap](wd/bootstrap.md)
   * [Sass](wd/sass.md)
 * Python
-  * [Python 3](python/python-3.md)
+  * [Python 3](python/python.md)
   * [Django](python/django.md)
   * [Flask](python/flask.md)
 
