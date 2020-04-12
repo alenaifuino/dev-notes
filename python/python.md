@@ -1,11 +1,5 @@
 # Python 3
 
-<div align="right">
-
-[:leftwards_arrow_with_hook:](README.md)
-
-</div>
-
 ## Contents
 
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
@@ -73,12 +67,6 @@ The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 * __Ensuring test isolation and managing global state__: Different tests shouldn't affect one another. This means to reset any permanent state at the end of each test. Django's test runner helps us do this by creating a test database, which it wipes clean in between each test.
 * __Avoid "voodoo" sleeps__: Whenever a wait for something to load is needed, it's always tempting to use time.sleep. But the problem is that length of time to wait is always a bit of a shot in the dark, either too short and vulnerable to spurious failures, or too long and it'll slow down our test runs. Prefer a retry loop that polls the app and moves on as soon as possible.
 * __Don't rely on implicit waits__: "Explicit is better than implicit", as the Zen of Python says, so prefer explicit waits.
-
-<div align="right">
-
-[:arrow_up:](#python-3)
-
-</div>
 
 ## Logging
 
@@ -196,9 +184,3 @@ logger.warning('This is a warning message.')
 logger.error('Uh oh. Something went wrong.')
 logger.critical('We have a big problem!')
 ```
-
-<div align="right">
-
-[:arrow_up:](#python-3)
-
-</div>

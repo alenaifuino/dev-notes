@@ -1,11 +1,5 @@
 # Django 1.11 LTS
 
-<div align="right">
-
-[:leftwards_arrow_with_hook:](README.md)
-
-</div>
-
 ## Contents
 
 * [Red Hat 7 Development Environment](#red-hat-7-development-environment)
@@ -48,12 +42,6 @@ MVC is a pattern for separating concerns regarding the data of a system and the 
 * it does logic as needed on the data return from either the user or the model
 * tells the view to render the collection of data
 * called **View** in Django
-
-<div align="right">
-
-[:arrow_up:](#django-111-lts)
-
-</div>  
 
 ## Red Hat 7 Development Environment
 
@@ -221,12 +209,6 @@ To work once again
 $ workon <project-name>
 ```
 
-<div align="right">
-
-[:arrow_up:](#django-111-lts)
-
-</div>  
-
 ## Creating a Django Project
 
 ### Create the Project
@@ -272,24 +254,12 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-<div align="right">
-
-[:arrow_up:](#django-111-lts)
-
-</div>  
-
 ## Django Workflow
 
 Django's main job is to decide what to do when a user asks for a particular URL on your site. Django's workflow goes something like this:
 1. An HTTP request comes in for a particular URL.
 2. Django uses some rules to decide which _view_ function should deal with the request (this is _resolving_ the URL).
 3. The view function processes the request and returns an HTTP response.
-
-<div align="right">
-
-[:arrow_up:](#django-111-lts)
-
-</div>  
 
 ## The Django ORM
 
@@ -318,10 +288,3 @@ If you instead would like to print the SQL statements that would be executed for
 ```Shell
 $ python manage.py sqlflush
 ```
-
-<div align="right">
-
-[:arrow_up:](#django-111-lts)
-
-</div>  
-
