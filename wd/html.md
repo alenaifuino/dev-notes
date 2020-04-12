@@ -8,7 +8,9 @@ HTML is made up of tags. Tags generally come in pairs, with data being in betwee
 
 The Document Object Model is a way to conceptualize webpages by representing them as an interconnected hierarchy of nodes. In HTML, the nodes of the DOM would be the different tags and their contained data, with the `<html></html>` tag being at the very top of the tree.
 
-## Common HTML tags
+## Tags reference
+
+There are lots of useful tags with HTML5, but not all browsers, especially older browsers, will support these new features. Nonetheless, these new features can be used with increasing confidence that they will be rendered appropriately for a significant portion of users.
 
 * `<html></html>` contents of the website
 * `<head></head>` metadata about the page that is useful for the browser when displaying the page
@@ -25,16 +27,18 @@ The Document Object Model is a way to conceptualize webpages by representing the
 * `<td></td>` table data (cell, must be inside `<tr></tr>`)
 * `<form></form>` form that can be filled out and submitted by the user
 * `<input type="text" placeholder="Full Name" name="name">` input field. *type* attribute indicates the type of data, *placeholder* is the greyed-out text shown before the field is filled, and *name* is an identifier for the input field
+* `<input type="radio"> Option 1` radio-button option for a form, where only one out of all the options may be selected
 * `<button></button>` button used to submit the form
+* `<a href="path/to/file.html">Hi!</a>` link to file.html, some URL, or some other content marked by id by passing #id to *href*
 
 ### Sectioning
 
 Two special tags allow us to break up a our webpage into sections:
+
 `<div></div>` vertical division of a webpage
 `<span></span>`  section of a webpage inside, for example, text
 
 Both `<div></div>` and `<span></span>` don’t really do much by themselves, but they allow for the labelling of sections of a webpage. Different sections of a webpage can be referenced with the *id* and *class* attributes. ids uniquely identify elements, but there can be an arbitary number of elements with a given class.
-
 
 ## Text Editors
 
