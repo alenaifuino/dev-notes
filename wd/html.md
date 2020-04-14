@@ -1,5 +1,16 @@
 # HTML
 
+## Contents
+
+* [Tags Reference](#tags-reference)
+  * Sectioning
+* [Text Editors](#text-editors)
+  * Visual Studio Code
+  * Atom
+  * Emacs
+  * Vi/Vim
+---
+
 HTML (HyperText Markup Language) is used to lay out the structure of a webpage.
 
 `<!DOCTYPE html>` is placed at the start of an HTML file to indicate to the browser that HTML5 is being used.
@@ -8,7 +19,7 @@ HTML is made up of tags. Tags generally come in pairs, with data being in betwee
 
 The Document Object Model is a way to conceptualize webpages by representing them as an interconnected hierarchy of nodes. In HTML, the nodes of the DOM would be the different tags and their contained data, with the `<html></html>` tag being at the very top of the tree.
 
-## Tags reference
+## Tags Reference
 
 There are lots of useful tags with HTML5, but not all browsers, especially older browsers, will support these new features. Nonetheless, these new features can be used with increasing confidence that they will be rendered appropriately for a significant portion of users.
 
@@ -50,8 +61,7 @@ Visual Studio Code is a source code editor developed by Microsoft that includes 
 * Cost: Free
 * Style: GUI
 
-
-[Atom Editor](https://atom.io/)
+[Atom](https://atom.io/)
 
 Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.
 
@@ -60,7 +70,6 @@ Both Atom and Visual Studio Code are hugely popular and the majority of web deve
 * Available for Windows, Mac, Linux
 * Cost: Free
 * Style: GUI
-
 
 [Emacs](https://www.gnu.org/software/emacs/)
 

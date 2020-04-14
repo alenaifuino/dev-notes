@@ -1,5 +1,15 @@
 # Git
 
+## Contents
+
+* [System Setup](#system-setup)
+* [Concepts](#concepts)
+  * Branching
+  * Forks
+* [Commands Reference](#commands-reference)
+* [GitHub Pages](#github-pages)
+---
+
 Git can keep track of changes made to code, synchronize code between different people, test changes to code without losing the original, and revert back to old versions of code.
 
 GitHub is a website that stores Git repositories on the internet to facilitate the collaboration that Git allows for. A repository is simply a place to keep track of code and all the changes to code.
@@ -37,7 +47,13 @@ Open source projects are often developed using forks. There will be one central 
 
 A pull request can be made to merge a branch of a repository with another branch of the same repository or even a different repository. Pull requests are a good way to get feedback on changes from collaborators on the same project. Note that forks and pull requests are both GitHub specific features.
 
-## Commands reference
+### Ignoring files
+Create a .gitignore file. It should include all files and directories that won't be tracked for changes
+```shell
+$ echo "<filename(s)>" >> .gitignore
+```
+
+## Commands Reference
 
 * `git clone <url>` take a repository stored on a server (like GitHub) and downloads it
 * `git init .` initialize the current directory as a new repository
@@ -62,13 +78,6 @@ A pull request can be made to merge a branch of a repository with another branch
 * `git checkout master` switch to branch *master*
 * `git merge <name>` merge branch *name* into current working branch (normally *master*)
 * `git merge origin/master` merge *origin/master*, which is the remote version of a repository normally downloaded with git fetch, into the local, preexisting *master* branch
-
-## Ignoring files
-
-Create a .gitignore file. It should include all files and directories that won't be tracked for changes
-```shell
-$ echo "<filename(s)>" >> .gitignore
-```
 
 ## GitHub Pages
 
