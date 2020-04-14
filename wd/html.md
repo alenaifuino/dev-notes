@@ -31,16 +31,16 @@ There are lots of useful tags with HTML5, but not all browsers, especially older
 * `<ul></ul>` unordered list
 * `<ol></ol>` ordered list
 * `<li></li>` list item (must be inside either `<ul></ul>` or `<ol></ol>`)
-* `<img src="path/to/img.file" height="200" width="300">` image stored at *src* attribute, which can also be a URL. Note that this is a single tag without an end tag. Both *height* and *width* are optional (if one is omitted, the browser will auto-size the image), and can also take a percentage: *height=50%* to automatically scale the image to a certain portion of the page
+* `<img src="path/to/img.file" height="200" width="300">` image stored at _src_ attribute, which can also be a URL. Note that this is a single tag without an end tag. Both _height_ and _width_ are optional (if one is omitted, the browser will auto-size the image), and can also take a percentage: _height=50%_ to automatically scale the image to a certain portion of the page
 * `<table></table>` table
 * `<th></th>` table header (must be inside `<table></table>`)
 * `<tr></tr>` table row (must be inside `<table></table>`)
 * `<td></td>` table data (cell, must be inside `<tr></tr>`)
 * `<form></form>` form that can be filled out and submitted by the user
-* `<input type="text" placeholder="Full Name" name="name">` input field. *type* attribute indicates the type of data, *placeholder* is the greyed-out text shown before the field is filled, and *name* is an identifier for the input field
+* `<input type="text" placeholder="Full Name" name="name">` input field. _type_ attribute indicates the type of data, _placeholder_ is the greyed-out text shown before the field is filled, and _name_ is an identifier for the input field
 * `<input type="radio"> Option 1` radio-button option for a form, where only one out of all the options may be selected
 * `<button></button>` button used to submit the form
-* `<a href="path/to/file.html">Hi!</a>` link to file.html, some URL, or some other content marked by id by passing #id to *href*
+* `<a href="path/to/file.html">Hi!</a>` link to file.html, some URL, or some other content marked by id by passing #id to _href_
 
 ### Sectioning
 
@@ -49,7 +49,7 @@ Two special tags allow us to break up a our webpage into sections:
 `<div></div>` vertical division of a webpage
 `<span></span>`  section of a webpage inside, for example, text
 
-Both `<div></div>` and `<span></span>` don’t really do much by themselves, but they allow for the labelling of sections of a webpage. Different sections of a webpage can be referenced with the *id* and *class* attributes. ids uniquely identify elements, but there can be an arbitary number of elements with a given class.
+Both `<div></div>` and `<span></span>` don’t really do much by themselves, but they allow for the labelling of sections of a webpage. Different sections of a webpage can be referenced with the _id_ and _class_ attributes. ids uniquely identify elements, but there can be an arbitary number of elements with a given class.
 
 ## Text Editors
 

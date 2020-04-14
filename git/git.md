@@ -34,11 +34,11 @@ $ git config credential.helper store
 Any version of a repository that is not stored locally on a device is called a **remote**. **Origin** is used to refer to the remote from which the local repository was originally downloaded from.
 
 ### Branching
-**Branching** is a feature of Git that allows a project to move in multiple different directions simultaneously. There is one *master* branch that is always usable, but any number of new branches can be created to develop new features. Once ready, these branches can then be merged back into *master*.
+**Branching** is a feature of Git that allows a project to move in multiple different directions simultaneously. There is one _master_ branch that is always usable, but any number of new branches can be created to develop new features. Once ready, these branches can then be merged back into _master_.
 
-When working in a Git repository, *HEAD* refers to the current branch being worked on. When a different branch is "checked out", the *HEAD* changes to indicate the new working branch.
+When working in a Git repository, _HEAD_ refers to the current branch being worked on. When a different branch is "checked out", the _HEAD_ changes to indicate the new working branch.
 
-When merging a branch back into *master*, there is the possibility for merge conflicts to arise. These conflicts thousl be resolved before being able to merge the branch.
+When merging a branch back into _master_, there is the possibility for merge conflicts to arise. These conflicts thousl be resolved before being able to merge the branch.
 
 ### Forks
 A **fork** of a repository is an entirely separate repository which is a copy of the original repository. A forked repository can be managed and modified like any other, all without affecting the original copy.
@@ -67,17 +67,17 @@ $ echo "<filename(s)>" >> .gitignore
 * `git fetch` download all of the latest commits from a remote to a local device
 * `git log` print a history of all the commits that have been made
 * `git reflog` print a list of all the different references to commits
-* `git reset --hard <commit>` reset the repository to commit *commit*
+* `git reset --hard <commit>` reset the repository to commit _commit_
 * `git reset --hard origin/master` reset the repository to its original state (e.g. the version cloned from GitHub)
 * `git rm -r --cached <filename(s)>` remove files that were set to be included in the repository and shouldn't be
 * `git branch` list all branches currently in a repository
-* `git branch <name>` create a new branch called *name*
-* `git branch -d <name>` delete branch called *name*
-* `git checkout <name>` switch current working branh to *name*
-* `git checkout -b <name>` create a new branch called *name* and switch to that branch
-* `git checkout master` switch to branch *master*
-* `git merge <name>` merge branch *name* into current working branch (normally *master*)
-* `git merge origin/master` merge *origin/master*, which is the remote version of a repository normally downloaded with git fetch, into the local, preexisting *master* branch
+* `git branch <name>` create a new branch called _name_
+* `git branch -d <name>` delete branch called _name_
+* `git checkout <name>` switch current working branh to _name_
+* `git checkout -b <name>` create a new branch called _name_ and switch to that branch
+* `git checkout master` switch to branch _master_
+* `git merge <name>` merge branch _name_ into current working branch (normally _master_)
+* `git merge origin/master` merge _origin/master_, which is the remote version of a repository normally downloaded with git fetch, into the local, preexisting _master_ branch
 
 ## GitHub Pages
 

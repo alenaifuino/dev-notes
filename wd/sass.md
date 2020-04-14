@@ -7,7 +7,7 @@ In order to use Sass, it must first be installed. Once [installed](http://sass-l
 
 If recompiling gets annoying, `sass --watch style.scss:style.css` to automatically recompile `style.scss` as `style.css` whenever `style.scss` is modified. Additionally, many website deployment systems, like GitHub Pages, have built in support for Sass. For example, if an .scss file is pushed to GitHub, GitHub Pages will compile it automatically.
 
-One feature of Sass is variables, which are defined as so: `$color: red;`. Anywhere `$color` is passed as a value for a CSS property, e.g. `color: $color`, *red* will be used.
+One feature of Sass is variables, which are defined as so: `$color: red;`. Anywhere `$color` is passed as a value for a CSS property, e.g. `color: $color`, _red_ will be used.
 
 Another feature is nesting, which is a more concise way to style elements which are related to other elements in a certain way.
 
@@ -25,7 +25,7 @@ div {
 }
 ```
 
-Another useful feature is *inheritance*, which is similar to the object-oriented concept. Sass’s inheritance allows for slight tweaking of a general style for different components.
+Another useful feature is _inheritance_, which is similar to the object-oriented concept. Sass’s inheritance allows for slight tweaking of a general style for different components.
 
 `%message` defines a general pattern that can be inherited in other style definitions using the `@extend %message` syntax. In addition, other style properties can be added.
 

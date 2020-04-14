@@ -14,7 +14,7 @@ CSS (Cascading Style Sheets) is a language used to interact with and style HTML,
 
 CSS can be applied to HTML in a variety of ways:
 
-* The *style* attribute `<h5 style="color:blue;text-align:center;"></h5>`. The semicolon-separated CSS properties passed to *style* will be applied to whatever the tag contains.
+* The _style_ attribute `<h5 style="color:blue;text-align:center;"></h5>`. The semicolon-separated CSS properties passed to _style_ will be applied to whatever the tag contains.
 * The `<style></style>` tags. This is a useful paradigm to use when reusing the same styling many times throughout a page. The properties listed will apply to all of the tags that are listed.
 * A separate .css file: add `<link rel="stylesheet" href="path/to/styles.css">` to the header, and move the CSS code (same format as used inside the `<style></style>` tags). This is often an even better paradigm because it separates two distinctly different things: structure (HTML) and style (CSS), while also being easier to manage and read.
 
@@ -96,7 +96,7 @@ p::selection {
 Responsive design is the idea that a website should look good regardless of the platform its viewed from.
 
 In order to interact with the screen size, the following must be included in head: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`.
-*viewport* is the visible area on which the screen is being displayed. *content* refers to the entire webpage the width of which is being set to device-width.
+_viewport_ is the visible area on which the screen is being displayed. _content_ refers to the entire webpage the width of which is being set to device-width.
 
 There are multiple ways to achieve this:
 
