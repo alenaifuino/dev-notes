@@ -3,6 +3,7 @@
 ## Contents
 * [Basic Syntax](#basic-syntax)
  * Conditional Statement
+* [Data Types](#data-types)
 * [Sequences](#sequences)
  * Strings
  * Tuples
@@ -10,7 +11,9 @@
  * Sets
  * Dictionaries
 * [Loops](#loops)
-* [Data Types](#data-types)
+* [Functions](#functions)
+* [Modules](#modules)
+* [Classes](#classes)
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
   * Terminology
   * Not Big Design Up Front
@@ -130,6 +133,66 @@ for name in names:
     print(name)
 ```
 
+## Functions
+
+Python has built-in functions, such as `print()` and `input()`, but Python also allows for the creation of user-defined functions. This is a function called `square`, which takes a single argument `x`, and returns the value `x * x`. Like loops, the body of a function must be indented.
+
+Trying to call a function that hasn’t been defined will raise a `NameError` exception.
+
+```Python
+  def square(x):
+      return x * x
+```
+
+## Modules
+
+Modules are separate `.py` files of code, often written by others, used in a new file without rewriting all the old code again. Using modules allows, for example, the use of functions across a program larger than a single file.
+
+Assuming the `square` function shown above was saved in `functions.py`, adding this line atop a new module will allow for the use of `square` there as well.
+
+```Python
+from functions import square
+```
+
+If, for example, `functions.py` also included some other code that wouldn't neccesarily be inside a function, that code would be executed every time `square` was imported from `functions`, because the Python interpreter reads through the entire `functions.py` file. To remedy this, code that should only run when their containing file is run directly should be encapsulated in a function, called, for example, `main`. After, the following should be appended:
+
+```Python
+if __name__ == "__main__":
+    main()
+```
+
+This should be interpreted as saying ‘if this file is currently being run’, execute `main`.
+
+## Classes
+
+A Python `class` can be thought of as a way to define a new, custom Python data type, somewhat analagous to defining a custom function. By convention, `class` names tend to start with a capital letter.
+
+This creates a new `class` called `Point`:
+
+```Python
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+```
+
+The __init__ function is a special function that defines the information needed when a new `Point` is created.
+
+* `self` is always required, which refers to the `Point` being created, while `x` and `y` are its coordinates.
+* `self.x` and `self.y` actually do the work of creating `x` and `y` attributes for the `Point` and assigning the m the values passed to `__init__`.
+
+This instantiates a new `Point` with `x = 3` and `y = 5`. When this line is run, the `__init__` function of the Point class is automatically run.
+
+```Python
+p = Point(3, 5)
+```
+
+To access the x attribute of p, use dot notation:
+
+```Python
+print(p.x)
+```
+
 ## Test-Driven Development (TDD)
 
 In TDD the first step is always the same: _write a test_.
@@ -139,6 +202,7 @@ _First_ write the test; _then_ run it and check that it fails as expected. _Only
 TDD is a _discipline_, and that means it's not something that comes naturally; because many of the payoffs aren't immediate but only come in the longer term, you have to force yourself to do it in the moment.
 
 ### Terminology
+
 __Functional tests__ may be called _acceptance tests_ or _end-to-end tests_ and they look at how the whole application functions, from the outside. Another term is _black box test_, because the test doesn't know anything about the internals  of the system under test.
 
 Functional tests can be a sort of specification for the application. It tends to track what might be called a _User story_, and follows how the user might work with a particular feature and how the app should respond to them. They have a human-readable story that can be followed and it's made explicit by using comments that accompany the test code.
@@ -146,9 +210,11 @@ Functional tests can be a sort of specification for the application. It tends to
 __Unit tests__ test the application from the inside, from the point of view of the programmer.
 
 ### Not Big Design Up Front
+
 TDD is closely associated with the agile movement in software development, which includes a reaction against _Big Design Up Front_, the traditional software engineering practice whereby, after a lengthy requirements gathering exercise, there is an equally lengthy design stage where the software is planned out on paper. The agile philosophy is that you learn more from solving problems in practice than in theory, especially when the application confronts with real users as soon as possible. Instead of a long up-front design phase, you try to put a _minimum viable application_ early, and let the design evolve gradually based on feedback from real-world usage.
 
 ### Workflow
+
 1. Write a _functional test_ describing the new functionality from the user's point of view
 2. Once you have a functional test that fails, start to think about how to write code that can get it to pass. Then you use one or more _unit tests_ to define how you want the code to behave. Each line of production code you write should be tested by (at least) one your unit tests
 3. Once you have a failing unit test, you write the smallest amount of _application code_ you can, just enough to get the unit test to pass. You may iterate between steps 2 and 3 a few times, until you think the functional test will get a little further.
@@ -163,16 +229,20 @@ The functional tests drive development from a high level, while unit tests drive
 > Functional tests should help you build an application with the right functionality, and guarantee you never accidentally break it. Unit tests should help you to write code that's clean and bug free.
 
 #### Red/Green/Refactor
+
 The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
+
 * Start by writing a unit test which fails (_Red_).
 * Write the simplest possible code to get it to pass (_Green_), _even if that means cheating_.
 * _Refactor_ to get to better code that makes more sense.
 
 #### Refactoring
+
 * __Eliminate duplication__: if your test uses a magic constant, and your application code also uses it, that counts as duplication, so it justifies refactoring. Removing the magic constant from the application code usually means you have to stop cheating.
 * __Triangulation__: if your test lets you get away with writing "cheating" code that you're not comfortable with, _write another test_ that forces you to write some better code.
 
 ### Useful Concepts
+
 * __Regression__: When new code breaks some aspect of the application which used to work.
 * __Unexpected failure__: When a test fails in a way it wasn't expected. This either means that a mistake in the tests was made, or that the tests have helped to find a regression and a fix in the code is required.
 * __Red/Green/Refactor__: Another way of describing the TDD process. See above.
@@ -180,6 +250,7 @@ The unit-test/code cycle is usually taught as _Red, Green, Refactor:_
 * __Three strikes and refactor__: A rule of thumb for when to remove duplication from code. When two pieces of code look very similar, it often pays to wait until you see a third use case, so that you're more sure about what part of the code really is the common, re-usable part to refactor out.
 
 ### Testing Best Practices
+
 * __Ensuring test isolation and managing global state__: Different tests shouldn't affect one another. This means to reset any permanent state at the end of each test. Django's test runner helps us do this by creating a test database, which it wipes clean in between each test.
 * __Avoid "voodoo" sleeps__: Whenever a wait for something to load is needed, it's always tempting to use time.sleep. But the problem is that length of time to wait is always a bit of a shot in the dark, either too short and vulnerable to spurious failures, or too long and it'll slow down our test runs. Prefer a retry loop that polls the app and moves on as soon as possible.
 * __Don't rely on implicit waits__: "Explicit is better than implicit", as the Zen of Python says, so prefer explicit waits.
@@ -192,28 +263,33 @@ Python provides logging through the ```logging``` module. It can be used in two 
 
 ### Basic Interface
 
-###### Usage
+Usage
+
 ```Python
 import logging
 logging.warning('Watch out!')
 logging.error('Watch out!')
 ```
-###### Output
+Output
+
 ```Shell
 $ WARNING:root:Watch Out!
 $ ERROR:root:Watch Out!
 ```
 
 #### Configuring the Basic Interface
+
 The `logging.basicConfig()` method has to be called exactly once and it must happen before the first logging event. Additionally if the program has several threads, it must be called from the main thread and *only* the main thread.
 
-##### Basic Arguments
+Basic Arguments
+
 * __level__: the log level threshold
 * __format__: the format of the log records
 * __filename__: filename to write log messages, by default writes to stderr
 * __filemode__: "a" to append to the log file (default), "w" to overwrite
 
-###### Log Level signals
+Log Level signals
+
 The following are the log level signals supported by the `logging` module from lowest to highest severity. The order matters in the list below; _debug_ is considered strictly less severe than _info_, and so on.
 
 * __debug__: detailed information, should be used when diagnosing problems (shouldn't be used in production)
@@ -227,18 +303,22 @@ Each level has a corresponding uppercased constant in the library (e.g., `loggin
 The phrase _log level_ has two different meanings depending on the context. It can mean the __severity__ of the message, which can be set by choosing which of the methods to use (e.g., `logging.warning()`). Or it can mean the __threshold__ for ignoring a message which is signaled by the constants (e.g., `logging.WARNING`).
 
 Constants can also be used in the more general `logging.log` method
+
 ```Python
 logging.log(logging.DEBUG, 'Small detail, useful for troubleshooting')
 ```
+
 This is useful to modify the log level dynamically at runtime:
+
 ```Python
 def log_results(message, level=logging.INFO):
     logging.log(level, 'Results: ' + message)
 ```
 
-###### Format Attributes
+##### Format Attributes
+
 Named fields are defined in percent-formatting by %(FIELDNAME)x, where "x" is a type code: _s_ for string, _d_ for integer (decimal), and _f_ for floating-point.
-The default is `%(levelname)s:%(name)s:%(message)s` where name is the name of the logger object (by default *root*).
+The default is `%(levelname)s:%(name)s:%(message)s` where name is the name of the logger object (by default _root_).
 
 Some of the most common attributes:
 
@@ -257,9 +337,11 @@ Full list can be found [here](https://docs.python.org/3/library/logging.html#log
 __Note__: if the log level threshold is higher than the message itself, the line does nothing. Having this into consideration it's important to consider avoiding formatting the string passed to the logger object in order to avoid using system memory and CPU cycles when no logging will take place.
 
 #### Implementation Example
+
 ```Shell
 $ export MODE=development
 ```
+
 ```Python
 import os
 mode = os.environ.get('MODE', 'production').upper()
@@ -278,20 +360,24 @@ logging.basicConfig(level = log_level, filename = log_file, filemode = log_mode)
 ```
 
 ### Logger Objects
+
 Larger Python applications tend to have different logging needs. `logging` meets these needs through a richer interface, called _logger objects_ or simplu _loggers_.
 
 When a call to `logging.warning()` (or other log method) is made, they convey messages through what is called the _root logger_, the primary, default logger object.
 
-`logging.basicConfig` operates on this root logger and the actual root logger object can be fetch by calling `logging.getLogger()`
+`logging.basicConfig` operates on this root logger and the actual root logger object can be fetch by calling `logging.getLogger()`.
+
 ```Python
 logger = logging.getLogger()
 logger.name
 ```
+
 ```Shell
 > 'root'
 ```
 
 Logger objects have all the same methods the logging module itself has:
+
 ```Python
 import logging
 logger = logging.getLogger()
