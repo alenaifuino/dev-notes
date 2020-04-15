@@ -1,7 +1,7 @@
 # Python 3
 
 ## Contents
-
+* [Basic Syntax](#basic-syntax)
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
   * Terminology
   * Not Big Design Up Front
@@ -13,6 +13,35 @@
   * Logger Objects
 ---
 
+## Basic Syntax
+
+Print a string to the screen
+```Python
+print('Hello, world!')
+```
+
+Print a format string (variable names enclosed with `{}` will be replaced by variable values)
+```Python
+print(f'Hello, {name}!')
+```
+
+Set variable `name` to the user input returned by `input()`
+```Python
+name = input()
+```
+
+Conditional statement
+* `elif` and `else` blocks are optional
+* Indentation in Python is required. Is used to demarcate blocks of code. In this example, the Python interpreter knows where the conditional `if` block ends and the `elif` block begins because of the changes in indentation.
+
+```Python
+if x > 0:
+    print("x is positive")
+elif x < 0:
+    print("x is negative")
+else:
+    print("x is zero")
+```
 
 ## Test-Driven Development (TDD)
 
@@ -75,6 +104,7 @@ Python provides logging through the ```logging``` module. It can be used in two 
 * __Logger objects__: complex to set up, far more powerful. Scales to any size
 
 ### Basic Interface
+
 ###### Usage
 ```Python
 import logging
