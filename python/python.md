@@ -2,7 +2,6 @@
 
 ## Contents
 * [Basic Syntax](#basic-syntax)
-  * Conditional Statement
 * [Data Types](#data-types)
 * [Sequences](#sequences)
   * Strings
@@ -10,6 +9,7 @@
   * Lists
   * Sets
   * Dictionaries
+* [Conditional Statement](#conditional-statement)
 * [Loops](#loops)
 * [Functions](#functions)
 * [Modules](#modules)
@@ -27,6 +27,8 @@
 
 ## Basic Syntax
 
+> Indentation in Python is required. Is used to demarcate blocks of code.
+
 Print a string to the screen
 ```Python
 print('Hello, world!')
@@ -40,19 +42,6 @@ print(f'Hello, {name}!')
 Set variable `name` to the user input returned by `input()`
 ```Python
 name = input()
-```
-
-### Conditional statement
-* `elif` and `else` blocks are optional
-* Indentation in Python is required. Is used to demarcate blocks of code. In this example, the Python interpreter knows where the conditional `if` block ends and the `elif` block begins because of the changes in indentation.
-
-```Python
-if x > 0:
-    print("x is positive")
-elif x < 0:
-    print("x is negative")
-else:
-    print("x is zero")
 ```
 
 ## Data Types
@@ -115,6 +104,19 @@ Dictionaries (or dicts) are like lists, except that they are unordered and their
   ages = {"Alice": 22, "Bob": 27}
   print(ages["Alice"])
   ages["Alice"] += 1
+```
+
+## Conditional statement
+
+* The Python interpreter knows where the conditional `if` block ends and the `elif` block begins because of the changes in indentation. `elif` and `else` blocks are optional.
+
+```Python
+if x > 0:
+    print("x is positive")
+elif x < 0:
+    print("x is negative")
+else:
+    print("x is zero")
 ```
 
 ## Loops
