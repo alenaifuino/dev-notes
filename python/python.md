@@ -2,14 +2,14 @@
 
 ## Contents
 * [Basic Syntax](#basic-syntax)
- * Conditional Statement
+  * Conditional Statement
 * [Data Types](#data-types)
 * [Sequences](#sequences)
- * Strings
- * Tuples
- * Lists
- * Sets
- * Dictionaries
+  * Strings
+  * Tuples
+  * Lists
+  * Sets
+  * Dictionaries
 * [Loops](#loops)
 * [Functions](#functions)
 * [Modules](#modules)
