@@ -2,6 +2,15 @@
 
 ## Contents
 * [Basic Syntax](#basic-syntax)
+ * Conditional Statement
+* [Sequences](#sequences)
+ * Strings
+ * Tuples
+ * Lists
+ * Sets
+ * Dictionaries
+* [Loops](#loops)
+* [Data Types](#data-types)
 * [Test-Driven Development (TDD)](#test-driven-development-tdd)
   * Terminology
   * Not Big Design Up Front
@@ -30,7 +39,7 @@ Set variable `name` to the user input returned by `input()`
 name = input()
 ```
 
-Conditional statement
+### Conditional statement
 * `elif` and `else` blocks are optional
 * Indentation in Python is required. Is used to demarcate blocks of code. In this example, the Python interpreter knows where the conditional `if` block ends and the `elif` block begins because of the changes in indentation.
 
@@ -41,6 +50,84 @@ elif x < 0:
     print("x is negative")
 else:
     print("x is zero")
+```
+
+## Data Types
+
+Python is a weakly typed language
+
+* `int` integer value
+* `float` floating point value
+* `str` text string
+* `bool` boolean value (True or False)
+* `None` empty value
+
+## Sequences
+
+Note that any sequence in Python can contain any number of data types.
+
+### Strings
+
+Strings are justs sequence of characters, and can be indexed as such.
+
+```Python
+  name = "Alice"
+  print(name[0])
+```
+
+### Tuples
+
+Tuples are immutable collections of values under a single name, which can be indexed positionally.
+
+```Python
+  coordinates = (10.0, 20.0)
+  print(coordinates[1])
+```
+
+### Lists
+
+Lists are mutable collections of values under a single name, which can be indexed positionally. Indexing out of range raises a Python ‘exception’. In this case, an `IndexError`, because there is no fourth value in `names` for Python to return.
+
+```Python
+  names = ["Alice", "Bob", "Charlie"]
+  print(names[2])
+```
+
+### Sets
+
+Sets are unordered collection of unique items. Because they are unordered, they cannot be indexed.
+
+```Python
+  s = set()
+  s.add(1)
+  s.add(3)
+  s.add(5)
+```
+
+### Dictionaries
+
+Dictionaries (or dicts) are like lists, except that they are unordered and their `value`s are indexed by `key`s. The `+=` operator increments the left-hand side by the right-hand side.
+
+```Python
+  ages = {"Alice": 22, "Bob": 27}
+  print(ages["Alice"])
+  ages["Alice"] += 1
+```
+
+## Loops
+
+For-loops iterate over their bodies a limited number of times. In this case, the number of iterations is set by `range(5)`. `range(5)` returns the sequence of numbers starting at 0 through 4. Each value is passed to `i` once, resulting in the loop running a total of 5 times. `i` is normally referred to as an iterator variable.
+
+```Python
+for i in range(5):
+    print(i)
+```
+
+This for-loop iterates over `names`, which is a list. Every value in the list is assigned, in order, to the iterator `name` once.
+
+```Python
+for name in names:
+    print(name)
 ```
 
 ## Test-Driven Development (TDD)
